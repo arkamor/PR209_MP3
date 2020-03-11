@@ -21,12 +21,12 @@ ENTITY FSM IS
         B_CENTER : in std_logic;
         B_LEFT   : in std_logic;
         B_RIGHT  : in std_logic;
-
-        PLAY_PAUSE : in std_logic;
-        RESTART    : in std_logic;
-        FORWARD    : in std_logic;
-        VOLUME_UP  : in std_logic;
-        VOLUME_DW  : in std_logic
+        
+        PLAY_PAUSE : out std_logic;
+        RESTART    : out std_logic;
+        FORWARD    : out std_logic;
+        VOLUME_UP  : out std_logic;
+        VOLUME_DW  : out std_logic
 
         
     );
