@@ -11,7 +11,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 ENTITY BP IS
     PORT (
-
+        
         clk : in std_logic;
 
         b_input  : in  std_logic;
@@ -23,15 +23,16 @@ END BP;
 
 architecture Behavioral of BP is
 
-
 begin
   
     PROCESS(clk) IS
     BEGIN  -- PROCESS
-        IF b_input = '1' THEN -- asynchronous reset
-            b_output <= '1';
-        ELSE
-            b_output <= '0';
+        IF clk'event AND clk = '1' THEN  -- rising clock edge
+            IF b_input = '1' THEN -- asynchronous reset
+                b_output <= '1';
+            ELSE
+                b_output <= '0';
+            END IF;
         END IF;
     END PROCESS;
 
