@@ -1,5 +1,5 @@
 ---------------------------------------------------------
--- VHDL top level for 8 bits processor's FSM				  
+-- VHDL file for DCB to 1 7SEG
 -- by Martin AUCHER & Kevin PEREZ, 02/2020
 --
 -- Code used for 8 bits processor courses at ENSEIRB-MATMECA
