@@ -14,20 +14,23 @@ entity Trans is
             forward       : in  STD_LOGIC;
             play_pause    : in  STD_LOGIC;
             
-            val_cpt_1_599 : in  STD_LOGIC_VECTOR(9 DOWNTO 0);
+            val_cpt_1_599_0 : in  STD_LOGIC_VECTOR(3 DOWNTO 0);
+            val_cpt_1_599_1 : in  STD_LOGIC_VECTOR(3 DOWNTO 0);
+            val_cpt_1_599_2 : in  STD_LOGIC_VECTOR(3 DOWNTO 0);
+            
             val_cpt_1_9   : in  STD_LOGIC_VECTOR(3 DOWNTO 0);
 
             -- Valeurs des compteurs
-            7_SEG_0       : out STD_LOGIC_VECTOR(6 DOWNTO 0); -- Full Droite
-            7_SEG_1       : out STD_LOGIC_VECTOR(6 DOWNTO 0);
-            7_SEG_2       : out STD_LOGIC_VECTOR(6 DOWNTO 0);
-            7_SEG_3       : out STD_LOGIC_VECTOR(6 DOWNTO 0);
+            SEG_0       : out STD_LOGIC_VECTOR(6 DOWNTO 0); -- Full Droite
+            SEG_1       : out STD_LOGIC_VECTOR(6 DOWNTO 0);
+            SEG_2       : out STD_LOGIC_VECTOR(6 DOWNTO 0);
+            SEG_3       : out STD_LOGIC_VECTOR(6 DOWNTO 0);
 
             -- Etats de la machine
-            7_SEG_4       : out STD_LOGIC_VECTOR(6 DOWNTO 0);
-            7_SEG_5       : out STD_LOGIC_VECTOR(6 DOWNTO 0);
-            7_SEG_6       : out STD_LOGIC_VECTOR(6 DOWNTO 0);
-            7_SEG_7       : out STD_LOGIC_VECTOR(6 DOWNTO 0)   -- Full Gauche
+            SEG_4       : out STD_LOGIC_VECTOR(6 DOWNTO 0);
+            SEG_5       : out STD_LOGIC_VECTOR(6 DOWNTO 0);
+            SEG_6       : out STD_LOGIC_VECTOR(6 DOWNTO 0);
+            SEG_7       : out STD_LOGIC_VECTOR(6 DOWNTO 0)   -- Full Gauche
 
            );
 end Trans;
@@ -43,28 +46,23 @@ signal BCD_Digit_0 : STD_LOGIC_VECTOR(5 DOWNTO 0);
 
 begin
 
-    7_SEG_5 <= '1000000';
-    7_SEG_6 <= '1000000';
+    SEG_5 <= "1000000";
+    SEG_6 <= "1000000";
 
     Tr0: Transcodeur_1 
     port map(
-            DCB_in => Clock,
-            SEG => 7_SEG_0
+            DCB_in => val_cpt_1_599_0,
+            SEG => SEG_0
         );
     Tr1: Transcodeur_1 
     port map(
-            DCB_in => Clock,
-            SEG => 7_SEG_1
+            DCB_in => val_cpt_1_599_1,
+            SEG => SEG_1
         );
     Tr2: Transcodeur_1 
     port map(
-            DCB_in => Clock,
-            SEG => 7_SEG_2
-        );
-    Tr3: Transcodeur_1 
-    port map(
-            DCB_in => Clock,
-            SEG => 7_SEG_3
+            DCB_in => val_cpt_1_599_2,
+            SEG => SEG_2
         );
     
 
