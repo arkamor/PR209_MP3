@@ -35,14 +35,14 @@ begin
             ELSE
                IF ( in_inc = '1' ) THEN 
                   IF ( in_dec = '0' ) THEN
-                     count <= count - 1;
-                     IF( count = 0 ) THEN
-                        count <= to_unsigned(599,10);
-                     END IF;
-                  ELSE
                      count <= count + 1;
                      IF( count = 600 ) THEN
                         count <= to_unsigned(1,10);
+                     END IF;
+                  ELSE
+                     count <= count - 1;
+                     IF( count = 0 ) THEN
+                        count <= to_unsigned(599,10);
                      END IF;
                   END IF;
                END IF;

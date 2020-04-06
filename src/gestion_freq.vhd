@@ -15,9 +15,8 @@ ENTITY gestion_freq IS
         clk : in std_logic;
         rst : in std_logic;
         
-
         output_10h : out std_logic;
-        output_k3  : out std_logic
+        output_3k  : out std_logic
 
     );
 
@@ -25,8 +24,8 @@ END gestion_freq;
 
 architecture Behavioral of gestion_freq is
 
-    signal count_3k : unsigned(15 DOWNTO 0) := (others => '0'); 
-    signal count_10h : unsigned(24 DOWNTO 0) := (others => '0');
+    signal count_3k : unsigned(15 DOWNTO 0); 
+    signal count_10h : unsigned(24 DOWNTO 0);
 
     signal out1, out2 : std_logic := '0';
     
@@ -38,17 +37,31 @@ begin
             count_3k <= (others => '0');
             count_10h <= (others => '0');
         ELSIF clk'event AND clk = '1' THEN  -- rising clock edge
-            IF (count_3k = 33333) THEN -- asynchronous reset
+        
+            count_3k  <= count_3k  + 1;
+            count_10h <= count_10h + 1;
+            
+            IF (count_3k = 33332) THEN -- asynchronous reset
                 count_3k <= (others => '0');
-                out1 <= not out1;
-            ELSIF (count_10h = 10000000) THEN -- asynchronous reset
+                IF (out2='0') THEN
+                     out2 <= '1';
+                ELSE
+                     out2 <= '0';
+                END IF;
+            END IF;
+            IF (count_10h = 9999999) THEN -- asynchronous reset
                 count_10h <= (others => '0');
-                out2 <= not out2;
+                IF (out1='0') THEN
+                     out1 <= '1';
+                ELSE
+                     out1 <= '0';
+                END IF;
+                     
             END IF;
         END IF;
     END PROCESS;
 
     output_10h <= out1;
-    output_10h <= out2;
+    output_3k <= out2;
 
 end Behavioral;
