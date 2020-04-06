@@ -83,7 +83,7 @@ begin
         end case;
 end PROCESS;
 
-PROCESS (current_state, Carry) IS
+PROCESS (current_state) IS
     BEGIN  -- PROCESS
     CASE current_state IS
         when init =>
@@ -97,15 +97,15 @@ PROCESS (current_state, Carry) IS
             PLAY_PAUSE <= '1'; --1
             RESTART    <= '0'; --2
             FORWARD    <= '1'; --3
-            VOLUME_UP  <= BP_UP; --4
-            VOLUME_DW  <= BP_DOWN; --5
+            VOLUME_UP  <= B_UP; --4
+            VOLUME_DW  <= B_DOWN; --5
         
         when play_bwd =>
             PLAY_PAUSE <= '1'; --1
             RESTART    <= '0'; --2
             FORWARD    <= '0'; --3
-            VOLUME_UP  <= BP_UP; --4
-            VOLUME_DW  <= BP_DOWN; --5
+            VOLUME_UP  <= B_UP; --4
+            VOLUME_DW  <= B_DOWN; --5
     
         when pause =>
             PLAY_PAUSE <= '0'; --1
