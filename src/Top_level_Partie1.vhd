@@ -195,35 +195,35 @@ begin
 BP_C: BP 
 port map(
     clk      => clk,
-    b_input  => BTNC,
+    b_input  => btnC,
     b_output => int_BP_Center
 );
 
 BP_D: BP 
 port map(
     clk      => clk,
-    b_input  => BTND,
+    b_input  => btnD,
     b_output => int_BP_Down
 );
 
 BP_U: BP 
 port map(
     clk      => clk,
-    b_input  => BTNU,
+    b_input  => btnU,
     b_output => int_BP_Up
 );
 
 BP_L: BP 
 port map(
     clk      => clk,
-    b_input  => BTNL,
+    b_input  => btnL,
     b_output => int_BP_Left
 );
 
 BP_R: BP 
 port map(
     clk      => clk,
-    b_input  => BTNR,
+    b_input  => btnR,
     b_output => int_BP_Right
 );
 

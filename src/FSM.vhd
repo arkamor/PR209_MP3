@@ -28,7 +28,6 @@ ENTITY FSM IS
         VOLUME_UP  : out std_logic;
         VOLUME_DW  : out std_logic
 
-        
     );
 
 END FSM;
@@ -83,7 +82,7 @@ begin
         end case;
 end PROCESS;
 
-PROCESS (current_state) IS
+PROCESS (current_state,B_UP,B_DOWN) IS
     BEGIN  -- PROCESS
     CASE current_state IS
         when init =>

@@ -43,6 +43,10 @@ signal BCD_Digit_0 : STD_LOGIC_VECTOR(3 DOWNTO 0);
 signal BCD_Digit_1 : STD_LOGIC_VECTOR(3 DOWNTO 0);
 signal BCD_Digit_2 : STD_LOGIC_VECTOR(3 DOWNTO 0);
 
+signal BCD_Digit_0_i : UNSIGNED(9 DOWNTO 0);
+signal BCD_Digit_1_i : UNSIGNED(9 DOWNTO 0);
+signal BCD_Digit_2_i : UNSIGNED(9 DOWNTO 0);
+
 
 begin
     
@@ -63,38 +67,28 @@ begin
         DCB_in => BCD_Digit_2,
         SEG => SEG_2
     );
+    
+    Tr3: Transcodeur_1 
+    port map(
+        DCB_in => val_cpt_1_9,
+        SEG => SEG_3
+    );
+    
 
     -- Middle hyphen for display 
     SEG_5 <= "1000000"; -- Droite
     SEG_6 <= "1000000"; -- Gauche
 
     bcd:process(val_cpt_1_599)
-    
-        variable s_digit_0 : unsigned(3 downto 0);
-        variable s_digit_1 : unsigned(3 downto 0);
-        variable s_digit_2 : unsigned(3 downto 0);
+    begin
         
-        begin
+        BCD_Digit_0_i <= (Unsigned(val_cpt_1_599)/100);
+        BCD_Digit_1_i <= (Unsigned(val_cpt_1_599) mod 100)/10;      
+        BCD_Digit_2_i  <= (Unsigned(val_cpt_1_599) mod 100)mod 10;
         
-        s_digit_0 := "0000";
-        s_digit_1 := "0000";
-        s_digit_2 := "0000";
-        
-        for i in 9 downto 0 loop
-        
-            if (s_digit_2 >= 5) then s_digit_2 := s_digit_2 + 3; end if;
-            if (s_digit_1 >= 5) then s_digit_1 := s_digit_1 + 3; end if;
-            if (s_digit_0 >= 5) then s_digit_0 := s_digit_0 + 3; end if;
-            
-            s_digit_2 := s_digit_2 sll 1; s_digit_2(0) := s_digit_1(3);
-            s_digit_1 := s_digit_1 sll 1; s_digit_1(0) := s_digit_0(3);
-            s_digit_0 := s_digit_0 sll 1; s_digit_0(0) := val_cpt_1_599(i);
-        
-        end loop;
-        
-        BCD_Digit_0 <=  std_logic_vector(s_digit_0);
-        BCD_Digit_1 <=  std_logic_vector(s_digit_1);
-        BCD_Digit_2 <=  std_logic_vector(s_digit_2);
+        BCD_Digit_0 <=  std_logic_vector(BCD_Digit_0_i(3 DOWNTO 0));
+        BCD_Digit_1 <=  std_logic_vector(BCD_Digit_1_i(3 DOWNTO 0));
+        BCD_Digit_2 <=  std_logic_vector(BCD_Digit_2_i(3 DOWNTO 0));
         
     end process bcd;
     
