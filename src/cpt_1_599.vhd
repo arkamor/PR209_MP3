@@ -19,33 +19,31 @@ end cpt_1_599;
 
 architecture Behavioral of cpt_1_599 is
 
-signal count : unsigned(9 DOWNTO 0) := "0000000000";
+signal count : unsigned(9 DOWNTO 0) := (others => '0');
 
 begin
 
    process (clk, rst) is
    begin
 
-      IF (rst = '1') THEN
+      IF (rst = '0') THEN
          count <= (others => '0');
       ELSIF( clk = '1' AND clk'event) THEN
-         IF ( ce = '1') THEN
-            IF ( in_raz = '1' ) THEN
+         IF ( in_raz = '1' ) THEN
             count <= (others => '0');
-            ELSE
-               IF ( in_inc = '1' ) THEN 
-                  IF ( in_dec = '0' ) THEN
-                     count <= count + 1;
-                     IF( count = 600 ) THEN
-                        count <= to_unsigned(1,10);
-                     END IF;
-                  ELSE
-                     count <= count - 1;
-                     IF( count = 0 ) THEN
-                        count <= to_unsigned(599,10);
-                     END IF;
-                  END IF;
-               END IF;
+         ELSIF ( ce = '1') THEN
+            IF ( in_inc = '1' ) THEN 
+              IF ( in_dec = '0' ) THEN
+                 count <= count + 1;
+                 IF( count = 600 ) THEN
+                    count <= to_unsigned(1,10);
+                 END IF;
+              ELSE
+                 count <= count - 1;
+                 IF( count = 0 ) THEN
+                    count <= to_unsigned(599,10);
+                 END IF;
+              END IF;
             END IF;
          END IF;
       END IF;

@@ -35,21 +35,22 @@ END FSM;
 architecture moore of FSM is
 
     type fsm_state IS(init, play_fwd, play_bwd, pause, stop);    
-    signal next_state ,current_state: fsm_state;
+    signal next_state ,current_state: fsm_state := init;
 
 begin
   
     PROCESS(clk,rst) IS
     BEGIN  -- PROCESS
-        IF rst = '1' THEN -- asynchronous reset
+        IF rst = '0' THEN -- asynchronous reset
             current_state <= init;
+            --next_state <= init;
         ELSIF clk'event AND clk = '1' THEN  -- rising clock edge
             current_state <= next_state;
         END IF;
     END PROCESS;
 
 
-    PROCESS(current_state, B_CENTER, B_RIGHT, B_LEFT) IS
+    PROCESS(B_CENTER, B_RIGHT, B_LEFT) IS
     BEGIN
         case current_state IS
 
@@ -58,7 +59,12 @@ begin
                     next_state <= play_fwd;
                 end if;
 
-            when play_fwd | play_bwd =>
+            when play_fwd =>
+                if(B_CENTER = '1') then
+                    next_state <= pause;
+                end if;
+                
+            when play_bwd =>
                 if(B_CENTER = '1') then
                     next_state <= pause;
                 end if;

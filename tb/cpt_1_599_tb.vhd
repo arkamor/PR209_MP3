@@ -45,11 +45,9 @@ begin
   
     stop_the_clock <= false;
     
-    ce <= '0';
-    rst <= '1';
-    wait for 5*clock_period;
-    ce <= '1';
     rst <= '0';
+    wait for 5*clock_period;
+    rst <= '1';
     wait for clock_period;
     
     
@@ -57,12 +55,12 @@ begin
     in_dec <= '0';
     in_raz <= '0';
     
-    wait for 21*clock_period;
+    wait for 210*clock_period;
     
     in_inc <= '1';
     in_dec <= '1';
     
-    wait for 10*clock_period;
+    wait for 100*clock_period;
     
     
     in_raz <= '1';
@@ -70,7 +68,7 @@ begin
     in_raz <= '0';
     
     
-    wait for 10*clock_period;
+    wait for 100*clock_period;
     
     stop_the_clock <= true;
     wait;
@@ -81,6 +79,17 @@ begin
     while not stop_the_clock loop
       clk <= '0', '1' after clock_period / 2;
       wait for clock_period;
+    end loop;
+    wait;
+  end process;
+  
+  ceing: process
+  begin
+    while not stop_the_clock loop
+      ce <= '1';
+      wait for clock_period;
+      ce <= '0';
+      wait for 5*clock_period;
     end loop;
     wait;
   end process;
