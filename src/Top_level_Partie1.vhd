@@ -25,7 +25,9 @@ ENTITY Top_Level_Partie1 IS
         
         dp  : out STD_LOGIC;
         
-        an  : out STD_LOGIC_VECTOR(7 DOWNTO 0)
+        an  : out STD_LOGIC_VECTOR(7 DOWNTO 0);
+        
+        led : out STD_LOGIC_VECTOR(15 DOWNTO 0)
         
     );
 
@@ -37,6 +39,7 @@ architecture Behavioral of Top_Level_Partie1 is
 component BP
 PORT (
     clk      : in STD_LOGIC;
+    rst      : in std_logic;
     b_input  : in  STD_LOGIC;
     b_output : out STD_LOGIC
 );
@@ -195,6 +198,7 @@ begin
 BP_C: BP 
 port map(
     clk      => clk,
+    rst      => btnCpuReset,
     b_input  => btnC,
     b_output => int_BP_Center
 );
@@ -202,6 +206,7 @@ port map(
 BP_D: BP 
 port map(
     clk      => clk,
+    rst      => btnCpuReset,
     b_input  => btnD,
     b_output => int_BP_Down
 );
@@ -209,6 +214,7 @@ port map(
 BP_U: BP 
 port map(
     clk      => clk,
+    rst      => btnCpuReset,
     b_input  => btnU,
     b_output => int_BP_Up
 );
@@ -216,6 +222,7 @@ port map(
 BP_L: BP 
 port map(
     clk      => clk,
+    rst      => btnCpuReset,
     b_input  => btnL,
     b_output => int_BP_Left
 );
@@ -223,6 +230,7 @@ port map(
 BP_R: BP 
 port map(
     clk      => clk,
+    rst      => btnCpuReset,
     b_input  => btnR,
     b_output => int_BP_Right
 );
@@ -265,7 +273,7 @@ port map(
     
     in_inc => int_Vol_up,
     in_dec => int_Vol_down,
-    in_raz => btnCpuReset,
+    in_raz => not btnCpuReset,
     
     out_cpt => int_Volume
 );
@@ -278,7 +286,7 @@ port map(
     
     in_inc => int_Play_pause,
     in_dec => int_Forward,
-    in_raz => btnCpuReset,
+    in_raz => not int_Restart,
     
     out_cpt => int_Time
 );
@@ -329,5 +337,18 @@ port map(
     an => an,
     seg_com => int_SEG_comm
 );
+
+ led(0) <= int_CE_affichage;
+
+ led(1) <= int_Forward;
+ led(2) <= int_Play_pause;
+ led(3) <= int_Restart;
+ led(4) <= int_Vol_down;
+ led(5) <= int_Vol_up;
+ 
+ led(15) <= int_BP_Center;
+ 
+ led(14 downto 6) <= "000000000";
+ 
 
 end Behavioral;

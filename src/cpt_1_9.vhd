@@ -18,30 +18,28 @@ end cpt_1_9;
 
 architecture Behavioral of cpt_1_9 is
 
-signal count : unsigned(3 DOWNTO 0) := "0000"; 
+signal count : unsigned(3 DOWNTO 0) := "0101"; 
 
 begin
 
    process (clk, rst) is
    begin
 
-      IF (rst = '1') THEN
-         count <= (others => '0');
+      IF (rst = '0') THEN
+         count <= "0101";
       ELSIF( clk = '1' AND clk'event) THEN
-         IF(ce = '1') THEN
-             IF ( in_raz = '1' ) THEN
-             count <= (others => '0');
-             ELSE
-                IF ( in_inc = '1' ) THEN
-                   IF ( count < 9 ) THEN
-                      count <= count + 1;
-                   END IF;
-                ELSIF ( in_dec = '1') THEN
-                   IF ( count > 0 ) THEN
-                      count <= count - 1;
-                   END IF;
-                END IF;
-             END IF;
+         IF ( in_raz = '1' ) THEN
+            count <= "0101";
+         ELSIF(ce = '1') THEN
+            IF ( in_inc = '1' ) THEN
+               IF ( count < 9 ) THEN
+                  count <= count + 1;
+               END IF;
+            ELSIF ( in_dec = '1') THEN
+               IF ( count > 0 ) THEN
+                  count <= count - 1;
+               END IF;
+            END IF;
          END IF;
       END IF;
 

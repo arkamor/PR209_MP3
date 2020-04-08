@@ -13,6 +13,7 @@ ENTITY BP IS
     PORT (
         
         clk : in std_logic;
+        rst : in std_logic;
 
         b_input  : in  std_logic;
         b_output : out std_logic
@@ -23,17 +24,33 @@ END BP;
 
 architecture Behavioral of BP is
 
+SIGNAL output : STD_LOGIC;
+SIGNAL count : unsigned(26 downto 0) := (others => '0');
+
 begin
   
-    PROCESS(clk) IS
+    PROCESS(clk,rst) IS
     BEGIN  -- PROCESS
-        IF clk'event AND clk = '1' THEN  -- rising clock edge
-            IF b_input = '1' THEN -- asynchronous reset
-                b_output <= '1';
+        IF rst='0' THEN
+            count <= (others => '0');
+        ELSIF clk'event AND clk = '0' THEN  -- rising clock edge
+            IF count=0 THEN
+                IF b_input = '1' THEN -- asynchronous reset
+                    output <= '1';
+                    count <= to_unsigned(1,27);
+                ELSE
+                    output <= '0';
+                END IF;
             ELSE
-                b_output <= '0';
+                output <= '0';
+                count <= count + 1;
+                IF count=10000000 THEN
+                    count <= to_unsigned(0,27);
+                END IF;
             END IF;
         END IF;
     END PROCESS;
+
+b_output <= output;
 
 end Behavioral;

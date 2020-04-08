@@ -30,7 +30,7 @@ begin
   
     main:PROCESS(clk,rst) IS
     BEGIN  -- PROCESS
-        IF (rst='1') THEN -- asynchronous reset
+        IF (rst='0') THEN -- asynchronous reset
             counter <= (others => '0');
         ELSIF clk'event AND clk = '1' THEN  -- rising clock edge
             IF ce = '1' THEN
@@ -46,7 +46,7 @@ begin
     begin
         tmp := (others => '0');
         tmp(to_integer(counter)) := '1';
-        an <= tmp;
+        an <= tmp xor "11111111";
     end process;
 
 end Behavioral;
