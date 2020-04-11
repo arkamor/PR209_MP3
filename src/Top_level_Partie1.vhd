@@ -284,9 +284,9 @@ port map(
     ce  => int_CE_affichage,
     rst => btnCpuReset,
     
-    in_inc => int_Play_pause,
-    in_dec => int_Forward,
-    in_raz => not int_Restart,
+    in_inc => '1',
+    in_dec => '0',
+    in_raz => '0',
     
     out_cpt => int_Time
 );

@@ -21,7 +21,7 @@ ENTITY FSM IS
         B_CENTER : in std_logic;
         B_LEFT   : in std_logic;
         B_RIGHT  : in std_logic;
-        
+       
         PLAY_PAUSE : out std_logic;
         RESTART    : out std_logic;
         FORWARD    : out std_logic;
@@ -52,8 +52,8 @@ begin
 
     PROCESS(B_CENTER, B_RIGHT, B_LEFT) IS
     BEGIN
+           
         case current_state IS
-
             when init =>
                 if(B_CENTER = '1') then
                     next_state <= play_fwd;
@@ -90,6 +90,7 @@ end PROCESS;
 
 PROCESS (current_state,B_UP,B_DOWN) IS
     BEGIN  -- PROCESS
+    
     CASE current_state IS
         when init =>
             PLAY_PAUSE <= '0'; --1
@@ -130,4 +131,5 @@ PROCESS (current_state,B_UP,B_DOWN) IS
 
     END CASE;
 END PROCESS;
+
 end moore;

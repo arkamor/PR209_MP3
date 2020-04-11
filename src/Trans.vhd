@@ -92,15 +92,15 @@ begin
    trans: process(restart,forward,play_pause)
    begin
         IF (restart = '0' and forward = '0') THEN -- [--- or ----
-            SEG_3 <= "0111111";
+            SEG_0 <= "0111111";
         ELSE -- [--] or ---]
-            SEG_3 <= "1000110";
+            SEG_0 <= "1110000";
         END IF;
         
         IF (forward = '0' and (restart = '1' or play_pause = '1')) THEN
-            SEG_0 <= "1110000";
+            SEG_3 <= "1000110";
         ELSE
-            SEG_0 <= "0111111";
+            SEG_3 <= "0111111";
         END IF;
     
     end process trans;

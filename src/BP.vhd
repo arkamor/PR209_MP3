@@ -44,7 +44,7 @@ begin
             ELSE
                 output <= '0';
                 count <= count + 1;
-                IF count=10000000 THEN
+                IF count=25000000 THEN
                     count <= to_unsigned(0,27);
                 END IF;
             END IF;

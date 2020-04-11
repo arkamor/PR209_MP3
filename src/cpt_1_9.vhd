@@ -36,7 +36,7 @@ begin
                   count <= count + 1;
                END IF;
             ELSIF ( in_dec = '1') THEN
-               IF ( count > 0 ) THEN
+               IF ( count > 1 ) THEN
                   count <= count - 1;
                END IF;
             END IF;
