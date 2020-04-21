@@ -10,10 +10,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 ENTITY Top_Level_Partie2 IS
+    GENERIC(
+        RAM_ADDR_BITS : INTEGER := 18
+    );
     PORT (
         btnCpuReset : in STD_LOGIC;
         
         clk : in  STD_LOGIC;
+        
+        RsTx : in STD_LOGIC;
         
         ampPWM : out STD_LOGIC;
         ampSD  : out STD_LOGIC
@@ -23,7 +28,6 @@ ENTITY Top_Level_Partie2 IS
 END Top_Level_Partie2;
 
 architecture Behavioral of Top_Level_Partie2 is
-
 
 component CE_gen_44100
     Port (
@@ -54,22 +58,46 @@ component cpt_0_44099
         rst     : IN STD_LOGIC;
         ce      : IN STD_LOGIC;
 
-        out_cpt : OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
+        out_cpt : OUT STD_LOGIC_VECTOR (RAM_ADDR_BITS-1 DOWNTO 0)
     );
 end component;
 
-component wav_rom
+component RAM
 PORT (
       CLOCK          : IN  STD_LOGIC;
-      ADDR_R         : IN  STD_LOGIC_VECTOR(15 DOWNTO 0);
+
+      W_E      : IN  STD_LOGIC;
+      
+      ADDR_W         : IN  STD_LOGIC_VECTOR(RAM_ADDR_BITS-1 DOWNTO 0);
+      DATA_IN        : IN  STD_LOGIC_VECTOR(10 DOWNTO 0);
+
+      ADDR_R         : IN  STD_LOGIC_VECTOR(RAM_ADDR_BITS-1 DOWNTO 0);
       DATA_OUT       : OUT STD_LOGIC_VECTOR(10 DOWNTO 0)
       );
 end component;
 
+component full_UART_recv
+    PORT (
+        clk_100MHz  : in  STD_LOGIC;
+        reset       : in  STD_LOGIC;
+        rx          : in  STD_LOGIC;
+
+        memory_addr : out STD_LOGIC_VECTOR (RAM_ADDR_BITS-1 downto 0);
+        data_value  : out STD_LOGIC_VECTOR (15 downto 0);
+        memory_wen  : out STD_LOGIC
+    );
+end component;
+
+
 --
 SIGNAL int_CE_44100  : STD_LOGIC;
-SIGNAL int_cpt_44100 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL int_cpt_44100 : STD_LOGIC_VECTOR(17 DOWNTO 0);
 SIGNAL int_mem_out   : STD_LOGIC_VECTOR(10 DOWNTO 0);
+
+SIGNAL int_mem_in    : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL int_addr_mem  : STD_LOGIC_VECTOR(17 DOWNTO 0);
+SIGNAL int_we        : STD_LOGIC;
+
 
 begin
   
@@ -88,9 +116,15 @@ port map(
     out_cpt => int_cpt_44100
 );
 
-wav_rom_i: wav_rom 
+RAM_i: RAM
 port map(
     CLOCK    => clk,
+    
+    W_E      => int_we,
+    
+    ADDR_W   => int_addr_mem,
+    DATA_IN  => int_mem_in(10 DOWNTO 0),
+    
     ADDR_R   => int_cpt_44100,
     DATA_OUT => int_mem_out
 );
@@ -103,6 +137,18 @@ port map(
     i_data    => int_mem_out,
     o_data    => ampPWM,
     o_data_en => ampSD
+);
+
+full_UART_recv_i: full_UART_recv 
+port map(
+    clk_100MHz  => clk,
+    
+    reset       => btnCpuReset,
+    rx          => RsTx,
+    
+    memory_addr => int_addr_mem,
+    data_value  => int_mem_in,
+    memory_wen  => int_we
 );
 
 end Behavioral;

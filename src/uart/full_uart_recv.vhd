@@ -37,7 +37,6 @@ entity full_UART_recv is
         data_value  : out STD_LOGIC_VECTOR (15 downto 0);
         memory_wen  : out STD_LOGIC
     );
-
 end full_UART_recv;
 
 architecture Behavioral of full_UART_recv is

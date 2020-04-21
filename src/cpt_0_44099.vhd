@@ -9,13 +9,13 @@ entity cpt_0_44099 is
         rst     : IN STD_LOGIC;
         ce      : IN STD_LOGIC;
 
-        out_cpt : OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
+        out_cpt : OUT STD_LOGIC_VECTOR (17 DOWNTO 0)
     );
 end cpt_0_44099;
 
 architecture Behavioral of cpt_0_44099 is
 
-signal count : unsigned(15 DOWNTO 0) := (others => '0');
+signal count : unsigned(17 DOWNTO 0) := (others => '0');
 
 begin
 
@@ -26,11 +26,7 @@ begin
          count <= (others => '0');
       ELSIF( clk = '1' AND clk'event) THEN
          IF ( ce = '1') THEN
-            IF ( count = 44099 ) THEN
-                count <= (others => '0');
-            ELSE
-                count <= count + 1;
-            END IF;
+           count <= count + 1;
          END IF;
       END IF;
 
