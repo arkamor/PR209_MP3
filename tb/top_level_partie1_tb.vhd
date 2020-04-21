@@ -70,7 +70,7 @@ begin
     wait for clock_period;
 
     while true loop
-        wait for 10*clock_period;
+        wait for 12*clock_period;
         
         btnC <= '1';
         wait for clock_period;
