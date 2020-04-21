@@ -18,9 +18,12 @@ ENTITY Top_Level_Partie2 IS
         
         clk : in  STD_LOGIC;
         
-        RsTx : in STD_LOGIC;
+        RsRx : in STD_LOGIC;
         
         ampPWM : out STD_LOGIC;
+        
+        led : out STD_LOGIC_VECTOR(15 DOWNTO 0);
+        
         ampSD  : out STD_LOGIC
         
     );
@@ -143,12 +146,16 @@ full_UART_recv_i: full_UART_recv
 port map(
     clk_100MHz  => clk,
     
-    reset       => btnCpuReset,
-    rx          => RsTx,
+    reset       => not btnCpuReset,
+    rx          => RsRx,
     
     memory_addr => int_addr_mem,
     data_value  => int_mem_in,
     memory_wen  => int_we
 );
+
+
+led(0) <= RsRx;
+led(1) <= int_we;
 
 end Behavioral;
