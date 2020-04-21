@@ -15,14 +15,14 @@ end cpt_0_44099;
 
 architecture Behavioral of cpt_0_44099 is
 
-signal count : unsigned(15 DOWNTO 0) := "0000000000000000";
+signal count : unsigned(15 DOWNTO 0) := (others => '0');
 
 begin
 
    process (clk, rst) is
    begin
 
-      IF (rst = '1') THEN
+      IF (rst = '0') THEN
          count <= (others => '0');
       ELSIF( clk = '1' AND clk'event) THEN
          IF ( ce = '1') THEN

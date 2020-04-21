@@ -12,6 +12,7 @@ architecture bench of cpt_0_44099_tb is
           clk     : IN STD_LOGIC;
           rst     : IN STD_LOGIC;
           ce      : IN STD_LOGIC;
+          
           out_cpt : OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
       );
   end component;
@@ -33,14 +34,17 @@ begin
 
   stimulus: process
   begin
-  
-    stop_the_clock <= false;
+    
+    -- Put initialisation code here
     
     ce <= '0';
     rst <= '1';
     wait for 5*clock_period;
     ce <= '1';
     rst <= '0';
+    
+    -- Put test bench stimulus code here
+    
     wait for 50000*clock_period;
     
     ce <= '0';

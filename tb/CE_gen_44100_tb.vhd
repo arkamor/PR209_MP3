@@ -2,12 +2,12 @@ library IEEE;
 use IEEE.Std_logic_1164.all;
 use IEEE.Numeric_Std.all;
 
-entity clk_divider_tb is
+entity CE_gen_44100_tb is
 end;
 
-architecture bench of clk_divider_tb is
+architecture bench of CE_gen_44100_tb is
 
-  component clk_divider
+  component CE_gen_44100
       Port (
           clk     : IN STD_LOGIC;
           rst     : IN STD_LOGIC;
@@ -24,16 +24,19 @@ architecture bench of clk_divider_tb is
 
 begin
 
-  uut: clk_divider port map ( clk     => clk,
-                              rst     => rst,
-                              clk_out => clk_out );
+  uut: CE_gen_44100 port map ( clk     => clk,
+                               rst     => rst,
+                               clk_out => clk_out );
 
   stimulus: process
   begin
-
+  
+    -- Put initialisation code here
     rst <= '1';
     wait for 10*clock_period;
     rst <= '0';
+    
+    -- Put test bench stimulus code here
 
     wait for 10000*clock_period;
 
