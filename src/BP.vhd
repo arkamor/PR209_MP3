@@ -24,16 +24,33 @@ END BP;
 
 architecture Behavioral of BP is
 
-SIGNAL MEM : STD_LOGIC;
+SIGNAL output : STD_LOGIC;
+SIGNAL count : unsigned(26 downto 0) := (others => '0');
 
 begin
   
-    PROCESS (clk)   
-    BEGIN     
-        IF (clk'EVENT AND clk = '1') THEN
-            MEM    <= b_input;
-            b_output <= (MEM XOR b_input) AND b_input;
+    PROCESS(clk,rst) IS
+    BEGIN  -- PROCESS
+        IF rst='0' THEN
+            count <= (others => '0');
+        ELSIF clk'event AND clk = '0' THEN  -- rising clock edge
+            IF count=0 THEN
+                IF b_input = '1' THEN -- asynchronous reset
+                    output <= '1';
+                    count <= to_unsigned(1,27);
+                ELSE
+                    output <= '0';
+                END IF;
+            ELSE
+                output <= '0';
+                count <= count + 1;
+                IF count=25000000 THEN
+                    count <= to_unsigned(0,27);
+                END IF;
+            END IF;
         END IF;
     END PROCESS;
+
+b_output <= output;
 
 end Behavioral;

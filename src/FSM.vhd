@@ -34,102 +34,101 @@ END FSM;
 
 architecture moore of FSM is
 
-    type fsm_state IS(init, play_fwd, play_bwd, pause, stop);    
-    signal next_state ,current_state: fsm_state := init;
+    type fsm_state IS(s_init, s_play_fwd, s_play_bwd, s_pause, s_stoop);    
+    signal next_state ,current_state: fsm_state := s_init;
 
 begin
   
-    PROCESS(clk,rst) IS
+    PROCESS(clk) IS
     BEGIN  -- PROCESS
-        IF rst = '0' THEN -- asynchronous reset
-            current_state <= init;
-            --next_state <= init;
-        ELSIF clk'event AND clk = '1' THEN  -- rising clock edge
+        IF clk'event AND clk = '1' THEN  -- rising clock edge
             current_state <= next_state;
         END IF;
     END PROCESS;
-
-
-    PROCESS(B_CENTER, B_RIGHT, B_LEFT) IS
+    
+    PROCESS(B_CENTER, B_RIGHT, B_LEFT, rst) IS
     BEGIN
-           
-        case current_state IS
-            when init =>
-                if(B_CENTER = '1') then
-                    next_state <= play_fwd;
-                end if;
-
-            when play_fwd =>
-                if(B_CENTER = '1') then
-                    next_state <= pause;
-                end if;
+        IF rst = '0' THEN -- asynchronous reset
+            --current_state <= init;
+            next_state <= s_init;
+        ELSE  
+            case current_state IS
+                when s_init =>
+                    if(B_CENTER = '1') then
+                        next_state <= s_play_fwd;
+                    end if;
+    
+                when s_play_fwd =>
+                    if(B_CENTER = '1') then
+                        next_state <= s_pause;
+                    end if;
+                    
+                when s_play_bwd =>
+                    if(B_CENTER = '1') then
+                        next_state <= s_pause;
+                    end if;
                 
-            when play_bwd =>
-                if(B_CENTER = '1') then
-                    next_state <= pause;
-                end if;
+                when s_pause =>
+                    if(B_LEFT = '1') then
+                        next_state <= s_play_bwd;
+                    elsif(B_RIGHT = '1') then
+                        next_state <= s_play_fwd;
+                    elsif(B_CENTER= '1') then
+                        next_state <= s_stoop;
+                    end if;
+                
+                when s_stoop =>
+                    if(B_CENTER = '1') then
+                        next_state <= s_play_fwd;
+                    end if;
             
-            when pause =>
-                if(B_CENTER = '1') then
-                    next_state <= stop;
-                elsif(B_RIGHT = '1') then
-                    next_state <= play_fwd;
-                elsif(B_LEFT = '1') then
-                    next_state <= play_bwd;
-                end if;
-            
-            when stop =>
-                if(B_CENTER = '1') then
-                    next_state <= play_fwd;
-                end if;
-        
-            when others => next_state <= init;
-
-        end case;
-end PROCESS;
-
-PROCESS (current_state,B_UP,B_DOWN) IS
+                when others => NULL;
+    
+            end case;
+        END IF;
+    END PROCESS;
+    
+    PROCESS (current_state, B_UP, B_DOWN) IS
     BEGIN  -- PROCESS
+        CASE current_state IS
+            when s_init =>
+                PLAY_PAUSE <= '0'; --1
+                RESTART    <= '1'; --2
+                FORWARD    <= '0'; --3
+                VOLUME_UP  <= '1'; --4
+                VOLUME_DW  <= '0'; --5
     
-    CASE current_state IS
-        when init =>
-            PLAY_PAUSE <= '0'; --1
-            RESTART    <= '1'; --2
-            FORWARD    <= '0'; --3
-            VOLUME_UP  <= '0'; --4
-            VOLUME_DW  <= '0'; --5
-
-        when play_fwd =>
-            PLAY_PAUSE <= '1'; --1
-            RESTART    <= '0'; --2
-            FORWARD    <= '1'; --3
-            VOLUME_UP  <= B_UP; --4
-            VOLUME_DW  <= B_DOWN; --5
+            when s_play_fwd =>
+                PLAY_PAUSE <= '1';    --1
+                RESTART    <= '0';    --2
+                FORWARD    <= '1';    --3
+                VOLUME_UP  <= B_UP;   --4
+                VOLUME_DW  <= B_DOWN; --5
+            
+            when s_play_bwd =>
+                PLAY_PAUSE <= '1';    --1
+                RESTART    <= '0';    --2
+                FORWARD    <= '0';    --3
+                VOLUME_UP  <= B_UP;   --4
+                VOLUME_DW  <= B_DOWN; --5
         
-        when play_bwd =>
-            PLAY_PAUSE <= '1'; --1
-            RESTART    <= '0'; --2
-            FORWARD    <= '0'; --3
-            VOLUME_UP  <= B_UP; --4
-            VOLUME_DW  <= B_DOWN; --5
+            when s_pause =>
+                PLAY_PAUSE <= '0'; --1
+                RESTART    <= '0'; --2
+                FORWARD    <= '0'; --3
+                VOLUME_UP  <= '0'; --4
+                VOLUME_DW  <= '0'; --5
     
-        when pause =>
-            PLAY_PAUSE <= '0'; --1
-            RESTART    <= '0'; --2
-            FORWARD    <= '0'; --3
-            VOLUME_UP  <= '0'; --4
-            VOLUME_DW  <= '0'; --5
-
-        when stop =>
-            PLAY_PAUSE <= '0'; --1
-            RESTART    <= '1'; --2
-            FORWARD    <= '0'; --3
-            VOLUME_UP  <= '0'; --4
-            VOLUME_DW  <= '0'; --5
-        
-        when others => NULL;
-
-    END CASE;
-END PROCESS;
+            when s_stoop =>
+                PLAY_PAUSE <= '0'; --1
+                RESTART    <= '1'; --2
+                FORWARD    <= '0'; --3
+                VOLUME_UP  <= '0'; --4
+                VOLUME_DW  <= '0'; --5
+            
+            when others => NULL;
+    
+        END CASE;
+    END PROCESS;
 
 end moore;
