@@ -1,0 +1,80 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Sat Apr 25 15:49:28 2020
+| Host         : cheese running 64-bit Debian GNU/Linux 10 (buster)
+| Command      : report_control_sets -verbose -file Top_Level_Partie1_control_sets_placed.rpt
+| Design       : Top_Level_Partie1
+| Device       : xc7a100t
+----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    12 |
+| Unused register locations in slices containing registers |    53 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      3 |            1 |
+|      4 |            1 |
+|      5 |            3 |
+|     10 |            1 |
+|    16+ |            6 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              10 |            5 |
+| No           | No                    | Yes                    |              44 |           12 |
+| No           | Yes                   | No                     |               3 |            1 |
+| Yes          | No                    | No                     |               5 |            5 |
+| Yes          | No                    | Yes                    |             149 |           39 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------+---------------------------------+------------------------+------------------+----------------+
+|           Clock Signal          |          Enable Signal          |    Set/Reset Signal    | Slice Load Count | Bel Load Count |
++---------------------------------+---------------------------------+------------------------+------------------+----------------+
+|  MP3_FSM/PLAY_PAUSE_reg_i_2_n_0 |                                 | BP_R/AR[0]             |                1 |              3 |
+|  clk_IBUF_BUFG                  | MP3_cpt_1_9/count[3]_i_1__0_n_0 | MP3_gestion_freq/AR[0] |                1 |              4 |
+|  clk_IBUF_BUFG                  |                                 |                        |                3 |              5 |
+| ~clk_IBUF_BUFG                  | btnCpuReset_IBUF                |                        |                5 |              5 |
+|  MP3_FSM/PLAY_PAUSE_reg_i_2_n_0 |                                 |                        |                2 |              5 |
+|  clk_IBUF_BUFG                  | MP3_FSM/E[0]                    | MP3_gestion_freq/AR[0] |                5 |             10 |
+| ~clk_IBUF_BUFG                  | BP_R/count                      | BP_R/AR[0]             |               10 |             27 |
+| ~clk_IBUF_BUFG                  | BP_U/count                      | BP_R/AR[0]             |                5 |             27 |
+| ~clk_IBUF_BUFG                  | BP_D/count                      | BP_R/AR[0]             |                6 |             27 |
+| ~clk_IBUF_BUFG                  | BP_C/count_0                    | BP_R/AR[0]             |                6 |             27 |
+| ~clk_IBUF_BUFG                  | BP_L/count                      | BP_R/AR[0]             |                6 |             27 |
+|  clk_IBUF_BUFG                  |                                 | MP3_gestion_freq/AR[0] |               12 |             44 |
++---------------------------------+---------------------------------+------------------------+------------------+----------------+
+
+

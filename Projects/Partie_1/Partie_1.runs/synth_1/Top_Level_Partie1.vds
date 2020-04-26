@@ -1,0 +1,489 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Apr 25 15:48:50 2020
+# Process ID: 7576
+# Current directory: /home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.runs/synth_1
+# Command line: vivado -log Top_Level_Partie1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Level_Partie1.tcl
+# Log file: /home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.runs/synth_1/Top_Level_Partie1.vds
+# Journal file: /home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source Top_Level_Partie1.tcl -notrace
+Command: synth_design -top Top_Level_Partie1 -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7638 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1353.898 ; gain = 0.000 ; free physical = 4030 ; free virtual = 8862
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-1565] actual for formal port in_raz is neither a static name nor a globally static expression [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:276]
+WARNING: [Synth 8-1565] actual for formal port in_dec is neither a static name nor a globally static expression [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:288]
+INFO: [Synth 8-638] synthesizing module 'Top_Level_Partie1' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:36]
+INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_C' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:198]
+INFO: [Synth 8-638] synthesizing module 'BP' [/home/user/cours/PR209_MP3/src/BP.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'BP' (1#1) [/home/user/cours/PR209_MP3/src/BP.vhd:25]
+INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_D' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:206]
+INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_U' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:214]
+INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_L' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:222]
+INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_R' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:230]
+INFO: [Synth 8-3491] module 'FSM' declared at '/home/user/cours/PR209_MP3/src/FSM.vhd:12' bound to instance 'MP3_FSM' of component 'FSM' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:238]
+INFO: [Synth 8-638] synthesizing module 'FSM' [/home/user/cours/PR209_MP3/src/FSM.vhd:35]
+WARNING: [Synth 8-614] signal 'current_state' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/FSM.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'FSM' (2#1) [/home/user/cours/PR209_MP3/src/FSM.vhd:35]
+INFO: [Synth 8-3491] module 'gestion_freq' declared at '/home/user/cours/PR209_MP3/src/gestion_freq.vhd:12' bound to instance 'MP3_gestion_freq' of component 'gestion_freq' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:259]
+INFO: [Synth 8-638] synthesizing module 'gestion_freq' [/home/user/cours/PR209_MP3/src/gestion_freq.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'gestion_freq' (3#1) [/home/user/cours/PR209_MP3/src/gestion_freq.vhd:25]
+INFO: [Synth 8-3491] module 'cpt_1_9' declared at '/home/user/cours/PR209_MP3/src/cpt_1_9.vhd:5' bound to instance 'MP3_cpt_1_9' of component 'cpt_1_9' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:268]
+INFO: [Synth 8-638] synthesizing module 'cpt_1_9' [/home/user/cours/PR209_MP3/src/cpt_1_9.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'cpt_1_9' (4#1) [/home/user/cours/PR209_MP3/src/cpt_1_9.vhd:19]
+INFO: [Synth 8-3491] module 'cpt_1_599' declared at '/home/user/cours/PR209_MP3/src/cpt_1_599.vhd:6' bound to instance 'MP3_cpt_1_599' of component 'cpt_1_599' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:281]
+INFO: [Synth 8-638] synthesizing module 'cpt_1_599' [/home/user/cours/PR209_MP3/src/cpt_1_599.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'cpt_1_599' (5#1) [/home/user/cours/PR209_MP3/src/cpt_1_599.vhd:20]
+INFO: [Synth 8-3491] module 'Trans' declared at '/home/user/cours/PR209_MP3/src/Trans.vhd:12' bound to instance 'MP3_Trans' of component 'Trans' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:294]
+INFO: [Synth 8-638] synthesizing module 'Trans' [/home/user/cours/PR209_MP3/src/Trans.vhd:35]
+INFO: [Synth 8-3491] module 'Transcodeur_1' declared at '/home/user/cours/PR209_MP3/src/Transcodeur_1.vhd:12' bound to instance 'Tr0' of component 'Transcodeur_1' [/home/user/cours/PR209_MP3/src/Trans.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'Transcodeur_1' [/home/user/cours/PR209_MP3/src/Transcodeur_1.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'Transcodeur_1' (6#1) [/home/user/cours/PR209_MP3/src/Transcodeur_1.vhd:17]
+INFO: [Synth 8-3491] module 'Transcodeur_1' declared at '/home/user/cours/PR209_MP3/src/Transcodeur_1.vhd:12' bound to instance 'Tr1' of component 'Transcodeur_1' [/home/user/cours/PR209_MP3/src/Trans.vhd:59]
+INFO: [Synth 8-3491] module 'Transcodeur_1' declared at '/home/user/cours/PR209_MP3/src/Transcodeur_1.vhd:12' bound to instance 'Tr2' of component 'Transcodeur_1' [/home/user/cours/PR209_MP3/src/Trans.vhd:65]
+INFO: [Synth 8-3491] module 'Transcodeur_1' declared at '/home/user/cours/PR209_MP3/src/Transcodeur_1.vhd:12' bound to instance 'Tr3' of component 'Transcodeur_1' [/home/user/cours/PR209_MP3/src/Trans.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'Trans' (7#1) [/home/user/cours/PR209_MP3/src/Trans.vhd:35]
+INFO: [Synth 8-3491] module 'mux8_seg' declared at '/home/user/cours/PR209_MP3/src/mux8_seg.vhd:12' bound to instance 'MP3_mux8_seg' of component 'mux8_seg' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:313]
+INFO: [Synth 8-638] synthesizing module 'mux8_seg' [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:32]
+INFO: [Synth 8-226] default block is never used [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:38]
+WARNING: [Synth 8-614] signal 'SEG0' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
+WARNING: [Synth 8-614] signal 'SEG1' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
+WARNING: [Synth 8-614] signal 'SEG2' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
+WARNING: [Synth 8-614] signal 'SEG3' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
+WARNING: [Synth 8-614] signal 'SEG4' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
+WARNING: [Synth 8-614] signal 'SEG5' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
+WARNING: [Synth 8-614] signal 'SEG6' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
+WARNING: [Synth 8-614] signal 'SEG7' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'mux8_seg' (8#1) [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:32]
+INFO: [Synth 8-3491] module 'mod8' declared at '/home/user/cours/PR209_MP3/src/mod8.vhd:12' bound to instance 'MP3_mod8' of component 'mod8' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:331]
+INFO: [Synth 8-638] synthesizing module 'mod8' [/home/user/cours/PR209_MP3/src/mod8.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'mod8' (9#1) [/home/user/cours/PR209_MP3/src/mod8.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'Top_Level_Partie1' (10#1) [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:36]
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[14] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[13] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[12] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[10] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[9] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[8] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[7] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[6] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[5] driven by constant 0
+WARNING: [Synth 8-3331] design FSM has unconnected port ce
+WARNING: [Synth 8-3331] design Top_Level_Partie1 has unconnected port led[15]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1370.199 ; gain = 16.301 ; free physical = 4007 ; free virtual = 8837
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1370.199 ; gain = 16.301 ; free physical = 4007 ; free virtual = 8836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1370.199 ; gain = 16.301 ; free physical = 4007 ; free virtual = 8836
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc]
+Finished Parsing XDC File [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Level_Partie1_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Level_Partie1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.066 ; gain = 0.000 ; free physical = 3694 ; free virtual = 8529
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.066 ; gain = 0.000 ; free physical = 3695 ; free virtual = 8530
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.066 ; gain = 0.000 ; free physical = 3695 ; free virtual = 8530
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.066 ; gain = 0.000 ; free physical = 3695 ; free virtual = 8530
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3727 ; free virtual = 8577
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3727 ; free virtual = 8577
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3723 ; free virtual = 8573
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'FSM'
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "output_3k" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "output_10h" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/user/cours/PR209_MP3/src/cpt_1_9.vhd:34]
+WARNING: [Synth 8-327] inferring latch for variable 'PLAY_PAUSE_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:105]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:45]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:45]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_init |                              000 |                              000
+              s_play_fwd |                              001 |                              001
+                 s_pause |                              010 |                              011
+              s_play_bwd |                              011 |                              010
+                 s_stoop |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'FSM'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:45]
+WARNING: [Synth 8-327] inferring latch for variable 'RESTART_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:106]
+WARNING: [Synth 8-327] inferring latch for variable 'FORWARD_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:107]
+WARNING: [Synth 8-327] inferring latch for variable 'VOLUME_UP_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:108]
+WARNING: [Synth 8-327] inferring latch for variable 'VOLUME_DW_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:109]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3673 ; free virtual = 8530
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     27 Bit       Adders := 5     
+	   2 Input     25 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
++---Registers : 
+	               27 Bit    Registers := 5     
+	               25 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   3 Input     27 Bit        Muxes := 5     
+	   2 Input     27 Bit        Muxes := 5     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 7     
+	   3 Input      2 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 15    
+	   5 Input      1 Bit        Muxes := 12    
+	   8 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module BP 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     27 Bit       Adders := 1     
++---Registers : 
+	               27 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     27 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module FSM 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 7     
+	   5 Input      1 Bit        Muxes := 12    
+Module gestion_freq 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               25 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module cpt_1_9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module cpt_1_599 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module Trans 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 2     
+Module mux8_seg 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      1 Bit        Muxes := 1     
+Module mod8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "MP3_gestion_freq/output_10h" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MP3_gestion_freq/output_3k" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[14] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[13] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[12] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[10] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[9] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[8] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[7] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[6] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[5] driven by constant 0
+WARNING: [Synth 8-3331] design Top_Level_Partie1 has unconnected port led[15]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3684 ; free virtual = 8537
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3575 ; free virtual = 8422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3573 ; free virtual = 8419
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3570 ; free virtual = 8417
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3571 ; free virtual = 8416
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3571 ; free virtual = 8416
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3571 ; free virtual = 8416
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3571 ; free virtual = 8416
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3571 ; free virtual = 8415
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3571 ; free virtual = 8415
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    55|
+|3     |LUT1   |     4|
+|4     |LUT2   |    60|
+|5     |LUT3   |    38|
+|6     |LUT4   |   135|
+|7     |LUT5   |    41|
+|8     |LUT6   |   135|
+|9     |FDCE   |   191|
+|10    |FDPE   |     2|
+|11    |FDRE   |    10|
+|12    |LD     |     5|
+|13    |LDC    |     3|
+|14    |IBUF   |     7|
+|15    |OBUF   |    31|
+|16    |OBUFT  |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------+-------------+------+
+|      |Instance           |Module       |Cells |
++------+-------------------+-------------+------+
+|1     |top                |             |   719|
+|2     |  BP_C             |BP           |    76|
+|3     |  BP_D             |BP_0         |    76|
+|4     |  BP_L             |BP_1         |    76|
+|5     |  BP_R             |BP_2         |    74|
+|6     |  BP_U             |BP_3         |    76|
+|7     |  MP3_FSM          |FSM          |    28|
+|8     |  MP3_Trans        |Trans        |    46|
+|9     |  MP3_cpt_1_599    |cpt_1_599    |    80|
+|10    |  MP3_cpt_1_9      |cpt_1_9      |    18|
+|11    |  MP3_gestion_freq |gestion_freq |   107|
+|12    |  MP3_mod8         |mod8         |    22|
++------+-------------------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3571 ; free virtual = 8415
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1711.066 ; gain = 16.301 ; free physical = 3623 ; free virtual = 8468
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.074 ; gain = 357.168 ; free physical = 3623 ; free virtual = 8468
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 63 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.074 ; gain = 0.000 ; free physical = 3570 ; free virtual = 8419
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  LD => LDCE: 5 instances
+  LDC => LDCE: 3 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+66 Infos, 42 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.074 ; gain = 357.375 ; free physical = 3591 ; free virtual = 8439
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.074 ; gain = 0.000 ; free physical = 3591 ; free virtual = 8439
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.runs/synth_1/Top_Level_Partie1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Top_Level_Partie1_utilization_synth.rpt -pb Top_Level_Partie1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 25 15:49:09 2020...

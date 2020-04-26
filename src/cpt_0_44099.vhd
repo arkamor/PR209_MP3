@@ -26,6 +26,9 @@ begin
          count <= (others => '0');
       ELSIF( clk = '1' AND clk'event) THEN
          IF ( ce = '1') THEN
+           IF (count = 44009) THEN
+             count <= (others => '0');
+           END IF;
            count <= count + 1;
          END IF;
       END IF;

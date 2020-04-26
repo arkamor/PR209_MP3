@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../src/gestion_freq.vhd" \
+"../../../../../tb/gestion_freq_tb.vhd" \
+
+# Do not sort compile order
+nosort

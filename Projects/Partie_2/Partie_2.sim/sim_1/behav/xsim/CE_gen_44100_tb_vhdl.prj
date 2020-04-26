@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Partie_2.srcs/sources_1/imports/src/CE_gen_44100.vhd" \
+"../../../../Partie_2.srcs/sources_1/imports/src/PWM.vhd" \
+"../../../../Partie_2.srcs/sources_1/imports/src/ROM_Sinus.vhd" \
+"../../../../Partie_2.srcs/sources_1/imports/src/cpt_0_44099.vhd" \
+"../../../../../../tb/PWM_tb.vhd" \
+"../../../../Partie_2.srcs/sim_1/imports/tb/clk_divider_tb.vhd" \
+"../../../../../../tb/CE_gen_44100_tb.vhd" \
+"../../../../../../tb/cpt_0_44099_tb.vhd" \
+
+# Do not sort compile order
+nosort

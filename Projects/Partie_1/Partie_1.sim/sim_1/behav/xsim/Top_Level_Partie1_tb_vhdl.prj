@@ -1,0 +1,16 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../src/BP.vhd" \
+"../../../../../src/FSM.vhd" \
+"../../../../../src/Top_level_Partie1.vhd" \
+"../../../../../src/Trans.vhd" \
+"../../../../../src/Transcodeur_1.vhd" \
+"../../../../../src/cpt_1_599.vhd" \
+"../../../../../src/cpt_1_9.vhd" \
+"../../../../../src/gestion_freq.vhd" \
+"../../../../../src/mod8.vhd" \
+"../../../../../src/mux8_seg.vhd" \
+"../../../../../tb/top_level_partie1_tb.vhd" \
+
+# Do not sort compile order
+nosort

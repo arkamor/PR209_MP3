@@ -25,9 +25,7 @@ ENTITY Top_Level_Partie1 IS
         
         dp  : out STD_LOGIC;
         
-        an  : out STD_LOGIC_VECTOR(7 DOWNTO 0);
-        
-        led : out STD_LOGIC_VECTOR(15 DOWNTO 0)
+        an  : out STD_LOGIC_VECTOR(7 DOWNTO 0)
         
     );
 
@@ -286,7 +284,7 @@ port map(
     
     in_inc => int_Play_pause,
     in_dec => not int_Forward,
-    in_raz => '0',
+    in_raz => int_Restart,
     
     out_cpt => int_Time
 );
@@ -337,18 +335,5 @@ port map(
     an => an,
     seg_com => int_SEG_comm
 );
-
- led(0) <= int_CE_affichage;
-
- led(1) <= int_Forward;
- led(2) <= int_Play_pause;
- led(3) <= int_Restart;
- led(4) <= int_Vol_down;
- led(5) <= int_Vol_up;
  
- led(15) <= int_BP_Center;
- 
- led(14 downto 6) <= "000000000";
- 
-
 end Behavioral;

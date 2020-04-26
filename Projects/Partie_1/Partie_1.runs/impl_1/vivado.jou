@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Apr 25 15:49:10 2020
+# Process ID: 7882
+# Current directory: /home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.runs/impl_1
+# Command line: vivado -log Top_Level_Partie1.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Top_Level_Partie1.tcl -notrace
+# Log file: /home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.runs/impl_1/Top_Level_Partie1.vdi
+# Journal file: /home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source Top_Level_Partie1.tcl -notrace

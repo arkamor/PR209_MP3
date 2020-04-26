@@ -61,7 +61,7 @@ component cpt_0_44099
         rst     : IN STD_LOGIC;
         ce      : IN STD_LOGIC;
 
-        out_cpt : OUT STD_LOGIC_VECTOR (RAM_ADDR_BITS-1 DOWNTO 0)
+        out_cpt : OUT STD_LOGIC_VECTOR (17 DOWNTO 0)
     );
 end component;
 
@@ -74,7 +74,7 @@ PORT (
       ADDR_W         : IN  STD_LOGIC_VECTOR(RAM_ADDR_BITS-1 DOWNTO 0);
       DATA_IN        : IN  STD_LOGIC_VECTOR(10 DOWNTO 0);
 
-      ADDR_R         : IN  STD_LOGIC_VECTOR(RAM_ADDR_BITS-1 DOWNTO 0);
+      ADDR_R         : IN  STD_LOGIC_VECTOR(17 DOWNTO 0);
       DATA_OUT       : OUT STD_LOGIC_VECTOR(10 DOWNTO 0)
       );
 end component;

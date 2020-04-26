@@ -56,16 +56,22 @@ begin
                 when s_init =>
                     if(B_CENTER = '1') then
                         next_state <= s_play_fwd;
+                    else 
+                        next_state <= s_init;
                     end if;
     
                 when s_play_fwd =>
                     if(B_CENTER = '1') then
                         next_state <= s_pause;
+                    else 
+                        next_state <= s_play_fwd;
                     end if;
                     
                 when s_play_bwd =>
                     if(B_CENTER = '1') then
                         next_state <= s_pause;
+                    else 
+                        next_state <= s_play_bwd;
                     end if;
                 
                 when s_pause =>
@@ -75,11 +81,15 @@ begin
                         next_state <= s_play_fwd;
                     elsif(B_CENTER= '1') then
                         next_state <= s_stoop;
+                    else 
+                        next_state <= s_pause;
                     end if;
                 
                 when s_stoop =>
                     if(B_CENTER = '1') then
                         next_state <= s_play_fwd;
+                    else 
+                        next_state <= s_stoop;
                     end if;
             
                 when others => NULL;
@@ -95,7 +105,7 @@ begin
                 PLAY_PAUSE <= '0'; --1
                 RESTART    <= '1'; --2
                 FORWARD    <= '0'; --3
-                VOLUME_UP  <= '1'; --4
+                VOLUME_UP  <= '0'; --4
                 VOLUME_DW  <= '0'; --5
     
             when s_play_fwd =>
