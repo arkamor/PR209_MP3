@@ -18,6 +18,7 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -id {DRC MDRV-1}  -suppress 
 set_msg_config  -id {Labtoolstcl 44-513}  -suppress 
 create_project -in_memory -part xc7a100tcsg324-1
@@ -31,6 +32,15 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_output_repo /home/user/cours/PR209_MP3/Projects/Partie_2/Partie_2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+set src_rc [catch { 
+  puts "source /home/user/cours/PR209_MP3/Projects/Partie_2/pre.tcl"
+  source /home/user/cours/PR209_MP3/Projects/Partie_2/pre.tcl
+} _RESULT] 
+if {$src_rc} { 
+  send_msg_id runtcl-1 error "$_RESULT"
+  send_msg_id runtcl-2 error "sourcing script /home/user/cours/PR209_MP3/Projects/Partie_2/pre.tcl failed"
+  return -code error
+}
 read_vhdl -library xil_defaultlib {
   /home/user/cours/PR209_MP3/src/Top_level_Partie2.vhd
   /home/user/cours/PR209_MP3/src/CE_gen_44100.vhd
@@ -41,6 +51,7 @@ read_vhdl -library xil_defaultlib {
   /home/user/cours/PR209_MP3/src/uart/full_uart_recv.vhd
   /home/user/cours/PR209_MP3/src/uart/uart_recv.vhd
   /home/user/cours/PR209_MP3/src/RAM.vhd
+  /home/user/cours/PR209_MP3/src/volume_manager.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

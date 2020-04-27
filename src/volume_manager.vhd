@@ -18,22 +18,18 @@ end Volume_Manager;
 
 architecture Behavioral of Volume_Manager is
 
-signal tmp : STD_LOGIC_VECTOR(10 DOWNTO 0) := (others => '0');
-
 begin
 
     process(clk, rst) is
     begin
         IF (rst='0') THEN
-            tmp <= (others => '0');
+            odata <= (others => '0');
         ELSIF (clk'event and clk='1') THEN
             IF ( ce = '1') THEN
-                tmp <= (others => '0');
-                tmp <= idata(10-to_integer(unsigned(volume)) DOWNTO to_integer(unsigned(volume)));
+                odata <= std_logic_vector(signed(idata)/2**(9-to_integer(unsigned(volume))));
             END IF;
         END IF;
     end process;
-    
-    odata <= tmp;
 
+    
 end Behavioral;

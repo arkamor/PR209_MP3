@@ -40,6 +40,36 @@ entity full_UART_recv is
 end full_UART_recv;
 
 architecture Behavioral of full_UART_recv is
+
+component UART_recv
+   Port ( clk    : in  STD_LOGIC;
+          reset  : in  STD_LOGIC;
+          rx     : in  STD_LOGIC;
+          dat    : out STD_LOGIC_VECTOR (7 downto 0);
+          dat_en : out STD_LOGIC);
+end component;
+
+component merger_8b_to_16b
+    PORT (
+      RESET      : IN  STD_LOGIC;
+      CLOCK      : IN  STD_LOGIC;
+      ENABLE     : IN  STD_LOGIC;
+      DATA_IN    : IN  STD_LOGIC_VECTOR ( 7 DOWNTO 0);
+      
+      DATA_OUT   : OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
+      DATA_READY : OUT STD_LOGIC
+      );
+end component;
+
+component stop_counter
+    PORT (
+      RESET     : IN  STD_LOGIC;
+      CLOCK     : IN  STD_LOGIC;
+      ENABLE    : IN  STD_LOGIC;
+      DATA_OUT  : OUT STD_LOGIC_VECTOR (RAM_ADDR_BITS-1 DOWNTO 0)
+      );
+end component;
+
     SIGNAL ADR_MEMOIRE_W   : STD_LOGIC_VECTOR (RAM_ADDR_BITS-1 DOWNTO 0);
     SIGNAL DATAE_FROM_UART : STD_LOGIC;
     SIGNAL DATA_FROM_UART  : STD_LOGIC_VECTOR ( 7 DOWNTO 0);
@@ -47,7 +77,7 @@ architecture Behavioral of full_UART_recv is
     SIGNAL DATA_TO_RAM     : STD_LOGIC_VECTOR (15 DOWNTO 0);
 BEGIN
 
-	receiver : ENTITY work.UART_recv
+	receiver : UART_recv
 	PORT MAP(
 		RESET => RESET,
 		clk   => clk_100MHz,
@@ -56,7 +86,7 @@ BEGIN
      dat_en   => DATAE_FROM_UART
      );
 
-	merger : ENTITY work.merger_8b_to_16b
+	merger : merger_8b_to_16b
 	PORT MAP(
         clock      => clk_100MHz,
         RESET      => RESET,
@@ -66,8 +96,7 @@ BEGIN
         DATA_READY => DATAE_TO_RAM
     );
 
-    counter : ENTITY WORK.stop_counter
-    GENERIC MAP ( BITS => RAM_ADDR_BITS )
+    counter : stop_counter
     PORT MAP(
         CLOCK    => clk_100MHz,
         RESET    => RESET,

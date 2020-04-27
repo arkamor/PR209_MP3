@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sat Apr 25 15:48:50 2020
-# Process ID: 7576
+# Start of session at: Sun Apr 26 10:57:41 2020
+# Process ID: 12090
 # Current directory: /home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.runs/synth_1
 # Command line: vivado -log Top_Level_Partie1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Level_Partie1.tcl
 # Log file: /home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.runs/synth_1/Top_Level_Partie1.vds
@@ -15,34 +15,34 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7638 
+INFO: Helper process launched with PID 12114 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1353.898 ; gain = 0.000 ; free physical = 4030 ; free virtual = 8862
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1354.898 ; gain = 0.000 ; free physical = 5911 ; free virtual = 10027
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-1565] actual for formal port in_raz is neither a static name nor a globally static expression [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:276]
-WARNING: [Synth 8-1565] actual for formal port in_dec is neither a static name nor a globally static expression [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:288]
-INFO: [Synth 8-638] synthesizing module 'Top_Level_Partie1' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:36]
-INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_C' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:198]
+WARNING: [Synth 8-1565] actual for formal port in_raz is neither a static name nor a globally static expression [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:274]
+WARNING: [Synth 8-1565] actual for formal port in_dec is neither a static name nor a globally static expression [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:286]
+INFO: [Synth 8-638] synthesizing module 'Top_Level_Partie1' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:34]
+INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_C' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:196]
 INFO: [Synth 8-638] synthesizing module 'BP' [/home/user/cours/PR209_MP3/src/BP.vhd:25]
 INFO: [Synth 8-256] done synthesizing module 'BP' (1#1) [/home/user/cours/PR209_MP3/src/BP.vhd:25]
-INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_D' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:206]
-INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_U' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:214]
-INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_L' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:222]
-INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_R' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:230]
-INFO: [Synth 8-3491] module 'FSM' declared at '/home/user/cours/PR209_MP3/src/FSM.vhd:12' bound to instance 'MP3_FSM' of component 'FSM' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:238]
+INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_D' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:204]
+INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_U' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:212]
+INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_L' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:220]
+INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_R' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:228]
+INFO: [Synth 8-3491] module 'FSM' declared at '/home/user/cours/PR209_MP3/src/FSM.vhd:12' bound to instance 'MP3_FSM' of component 'FSM' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:236]
 INFO: [Synth 8-638] synthesizing module 'FSM' [/home/user/cours/PR209_MP3/src/FSM.vhd:35]
 WARNING: [Synth 8-614] signal 'current_state' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/FSM.vhd:49]
 INFO: [Synth 8-256] done synthesizing module 'FSM' (2#1) [/home/user/cours/PR209_MP3/src/FSM.vhd:35]
-INFO: [Synth 8-3491] module 'gestion_freq' declared at '/home/user/cours/PR209_MP3/src/gestion_freq.vhd:12' bound to instance 'MP3_gestion_freq' of component 'gestion_freq' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:259]
+INFO: [Synth 8-3491] module 'gestion_freq' declared at '/home/user/cours/PR209_MP3/src/gestion_freq.vhd:12' bound to instance 'MP3_gestion_freq' of component 'gestion_freq' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:257]
 INFO: [Synth 8-638] synthesizing module 'gestion_freq' [/home/user/cours/PR209_MP3/src/gestion_freq.vhd:25]
 INFO: [Synth 8-256] done synthesizing module 'gestion_freq' (3#1) [/home/user/cours/PR209_MP3/src/gestion_freq.vhd:25]
-INFO: [Synth 8-3491] module 'cpt_1_9' declared at '/home/user/cours/PR209_MP3/src/cpt_1_9.vhd:5' bound to instance 'MP3_cpt_1_9' of component 'cpt_1_9' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:268]
+INFO: [Synth 8-3491] module 'cpt_1_9' declared at '/home/user/cours/PR209_MP3/src/cpt_1_9.vhd:5' bound to instance 'MP3_cpt_1_9' of component 'cpt_1_9' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:266]
 INFO: [Synth 8-638] synthesizing module 'cpt_1_9' [/home/user/cours/PR209_MP3/src/cpt_1_9.vhd:19]
 INFO: [Synth 8-256] done synthesizing module 'cpt_1_9' (4#1) [/home/user/cours/PR209_MP3/src/cpt_1_9.vhd:19]
-INFO: [Synth 8-3491] module 'cpt_1_599' declared at '/home/user/cours/PR209_MP3/src/cpt_1_599.vhd:6' bound to instance 'MP3_cpt_1_599' of component 'cpt_1_599' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:281]
+INFO: [Synth 8-3491] module 'cpt_1_599' declared at '/home/user/cours/PR209_MP3/src/cpt_1_599.vhd:6' bound to instance 'MP3_cpt_1_599' of component 'cpt_1_599' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:279]
 INFO: [Synth 8-638] synthesizing module 'cpt_1_599' [/home/user/cours/PR209_MP3/src/cpt_1_599.vhd:20]
 INFO: [Synth 8-256] done synthesizing module 'cpt_1_599' (5#1) [/home/user/cours/PR209_MP3/src/cpt_1_599.vhd:20]
-INFO: [Synth 8-3491] module 'Trans' declared at '/home/user/cours/PR209_MP3/src/Trans.vhd:12' bound to instance 'MP3_Trans' of component 'Trans' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:294]
+INFO: [Synth 8-3491] module 'Trans' declared at '/home/user/cours/PR209_MP3/src/Trans.vhd:12' bound to instance 'MP3_Trans' of component 'Trans' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:292]
 INFO: [Synth 8-638] synthesizing module 'Trans' [/home/user/cours/PR209_MP3/src/Trans.vhd:35]
 INFO: [Synth 8-3491] module 'Transcodeur_1' declared at '/home/user/cours/PR209_MP3/src/Transcodeur_1.vhd:12' bound to instance 'Tr0' of component 'Transcodeur_1' [/home/user/cours/PR209_MP3/src/Trans.vhd:53]
 INFO: [Synth 8-638] synthesizing module 'Transcodeur_1' [/home/user/cours/PR209_MP3/src/Transcodeur_1.vhd:17]
@@ -51,7 +51,7 @@ INFO: [Synth 8-3491] module 'Transcodeur_1' declared at '/home/user/cours/PR209_
 INFO: [Synth 8-3491] module 'Transcodeur_1' declared at '/home/user/cours/PR209_MP3/src/Transcodeur_1.vhd:12' bound to instance 'Tr2' of component 'Transcodeur_1' [/home/user/cours/PR209_MP3/src/Trans.vhd:65]
 INFO: [Synth 8-3491] module 'Transcodeur_1' declared at '/home/user/cours/PR209_MP3/src/Transcodeur_1.vhd:12' bound to instance 'Tr3' of component 'Transcodeur_1' [/home/user/cours/PR209_MP3/src/Trans.vhd:71]
 INFO: [Synth 8-256] done synthesizing module 'Trans' (7#1) [/home/user/cours/PR209_MP3/src/Trans.vhd:35]
-INFO: [Synth 8-3491] module 'mux8_seg' declared at '/home/user/cours/PR209_MP3/src/mux8_seg.vhd:12' bound to instance 'MP3_mux8_seg' of component 'mux8_seg' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:313]
+INFO: [Synth 8-3491] module 'mux8_seg' declared at '/home/user/cours/PR209_MP3/src/mux8_seg.vhd:12' bound to instance 'MP3_mux8_seg' of component 'mux8_seg' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:311]
 INFO: [Synth 8-638] synthesizing module 'mux8_seg' [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:32]
 INFO: [Synth 8-226] default block is never used [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:38]
 WARNING: [Synth 8-614] signal 'SEG0' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
@@ -63,24 +63,13 @@ WARNING: [Synth 8-614] signal 'SEG5' is read in the process but is not in the se
 WARNING: [Synth 8-614] signal 'SEG6' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
 WARNING: [Synth 8-614] signal 'SEG7' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
 INFO: [Synth 8-256] done synthesizing module 'mux8_seg' (8#1) [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:32]
-INFO: [Synth 8-3491] module 'mod8' declared at '/home/user/cours/PR209_MP3/src/mod8.vhd:12' bound to instance 'MP3_mod8' of component 'mod8' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:331]
+INFO: [Synth 8-3491] module 'mod8' declared at '/home/user/cours/PR209_MP3/src/mod8.vhd:12' bound to instance 'MP3_mod8' of component 'mod8' [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:329]
 INFO: [Synth 8-638] synthesizing module 'mod8' [/home/user/cours/PR209_MP3/src/mod8.vhd:24]
 INFO: [Synth 8-256] done synthesizing module 'mod8' (9#1) [/home/user/cours/PR209_MP3/src/mod8.vhd:24]
-INFO: [Synth 8-256] done synthesizing module 'Top_Level_Partie1' (10#1) [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:36]
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[14] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[13] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[12] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[11] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[10] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[9] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[8] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[7] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[6] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[5] driven by constant 0
+INFO: [Synth 8-256] done synthesizing module 'Top_Level_Partie1' (10#1) [/home/user/cours/PR209_MP3/src/Top_level_Partie1.vhd:34]
 WARNING: [Synth 8-3331] design FSM has unconnected port ce
-WARNING: [Synth 8-3331] design Top_Level_Partie1 has unconnected port led[15]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1370.199 ; gain = 16.301 ; free physical = 4007 ; free virtual = 8837
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1370.199 ; gain = 15.301 ; free physical = 5896 ; free virtual = 10013
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -93,10 +82,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1370.199 ; gain = 16.301 ; free physical = 4007 ; free virtual = 8836
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1370.199 ; gain = 15.301 ; free physical = 5897 ; free virtual = 10015
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1370.199 ; gain = 16.301 ; free physical = 4007 ; free virtual = 8836
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1370.199 ; gain = 15.301 ; free physical = 5897 ; free virtual = 10015
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -104,33 +93,129 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc]
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.srcs/constrs_1/new/nexys4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Level_Partie1_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Level_Partie1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.066 ; gain = 0.000 ; free physical = 3694 ; free virtual = 8529
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.059 ; gain = 0.000 ; free physical = 5540 ; free virtual = 9695
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.066 ; gain = 0.000 ; free physical = 3695 ; free virtual = 8530
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.059 ; gain = 0.000 ; free physical = 5540 ; free virtual = 9695
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.066 ; gain = 0.000 ; free physical = 3695 ; free virtual = 8530
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.066 ; gain = 0.000 ; free physical = 3695 ; free virtual = 8530
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.059 ; gain = 0.000 ; free physical = 5540 ; free virtual = 9695
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.059 ; gain = 0.000 ; free physical = 5540 ; free virtual = 9695
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3727 ; free virtual = 8577
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1711.059 ; gain = 356.160 ; free physical = 5703 ; free virtual = 9859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3727 ; free virtual = 8577
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1711.059 ; gain = 356.160 ; free physical = 5703 ; free virtual = 9859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3723 ; free virtual = 8573
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1711.059 ; gain = 356.160 ; free physical = 5705 ; free virtual = 9861
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'FSM'
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -165,7 +250,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'FORWARD_reg' [/home/user/co
 WARNING: [Synth 8-327] inferring latch for variable 'VOLUME_UP_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:108]
 WARNING: [Synth 8-327] inferring latch for variable 'VOLUME_DW_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:109]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3673 ; free virtual = 8530
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1711.059 ; gain = 356.160 ; free physical = 5697 ; free virtual = 9853
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -300,19 +385,8 @@ Start Cross Boundary and Area Optimization
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5546] ROM "MP3_gestion_freq/output_10h" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "MP3_gestion_freq/output_3k" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[14] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[13] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[12] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[11] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[10] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[9] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[8] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[7] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[6] driven by constant 0
-WARNING: [Synth 8-3917] design Top_Level_Partie1 has port led[5] driven by constant 0
-WARNING: [Synth 8-3331] design Top_Level_Partie1 has unconnected port led[15]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3684 ; free virtual = 8537
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1711.059 ; gain = 356.160 ; free physical = 5665 ; free virtual = 9827
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -324,13 +398,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3575 ; free virtual = 8422
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1711.059 ; gain = 356.160 ; free physical = 5548 ; free virtual = 9718
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3573 ; free virtual = 8419
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1711.059 ; gain = 356.160 ; free physical = 5545 ; free virtual = 9715
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -342,7 +416,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3570 ; free virtual = 8417
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1711.059 ; gain = 356.160 ; free physical = 5542 ; free virtual = 9712
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -366,7 +440,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3571 ; free virtual = 8416
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1711.059 ; gain = 356.160 ; free physical = 5529 ; free virtual = 9700
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -379,7 +453,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3571 ; free virtual = 8416
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1711.059 ; gain = 356.160 ; free physical = 5529 ; free virtual = 9700
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -391,25 +465,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3571 ; free virtual = 8416
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1711.059 ; gain = 356.160 ; free physical = 5528 ; free virtual = 9699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3571 ; free virtual = 8416
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1711.059 ; gain = 356.160 ; free physical = 5528 ; free virtual = 9699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3571 ; free virtual = 8415
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1711.059 ; gain = 356.160 ; free physical = 5528 ; free virtual = 9699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3571 ; free virtual = 8415
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1711.059 ; gain = 356.160 ; free physical = 5528 ; free virtual = 9699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -439,15 +513,14 @@ Report Cell Usage:
 |12    |LD     |     5|
 |13    |LDC    |     3|
 |14    |IBUF   |     7|
-|15    |OBUF   |    31|
-|16    |OBUFT  |     1|
+|15    |OBUF   |    16|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+-------------------+-------------+------+
 |      |Instance           |Module       |Cells |
 +------+-------------------+-------------+------+
-|1     |top                |             |   719|
+|1     |top                |             |   703|
 |2     |  BP_C             |BP           |    76|
 |3     |  BP_D             |BP_0         |    76|
 |4     |  BP_L             |BP_1         |    76|
@@ -461,29 +534,29 @@ Report Instance Areas:
 |12    |  MP3_mod8         |mod8         |    22|
 +------+-------------------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.066 ; gain = 357.168 ; free physical = 3571 ; free virtual = 8415
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.059 ; gain = 356.160 ; free physical = 5528 ; free virtual = 9699
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1711.066 ; gain = 16.301 ; free physical = 3623 ; free virtual = 8468
-Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.074 ; gain = 357.168 ; free physical = 3623 ; free virtual = 8468
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1711.059 ; gain = 15.301 ; free physical = 5583 ; free virtual = 9753
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.066 ; gain = 356.160 ; free physical = 5582 ; free virtual = 9753
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 63 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.074 ; gain = 0.000 ; free physical = 3570 ; free virtual = 8419
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.066 ; gain = 0.000 ; free physical = 5521 ; free virtual = 9690
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
   LD => LDCE: 5 instances
   LDC => LDCE: 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-66 Infos, 42 Warnings, 0 Critical Warnings and 0 Errors encountered.
+66 Infos, 52 Warnings, 32 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.074 ; gain = 357.375 ; free physical = 3591 ; free virtual = 8439
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.074 ; gain = 0.000 ; free physical = 3591 ; free virtual = 8439
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1711.066 ; gain = 356.367 ; free physical = 5548 ; free virtual = 9717
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.066 ; gain = 0.000 ; free physical = 5548 ; free virtual = 9717
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/user/cours/PR209_MP3/Projects/Partie_1/Partie_1.runs/synth_1/Top_Level_Partie1.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Level_Partie1_utilization_synth.rpt -pb Top_Level_Partie1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 25 15:49:09 2020...
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 26 10:58:00 2020...

@@ -22,8 +22,6 @@ ENTITY Top_Level_Partie2 IS
         
         ampPWM : out STD_LOGIC;
         
-        led : out STD_LOGIC_VECTOR(15 DOWNTO 0);
-        
         ampSD  : out STD_LOGIC
         
     );
@@ -91,15 +89,37 @@ component full_UART_recv
     );
 end component;
 
+component Volume_Manager
+    Port (
+        clk     : IN STD_LOGIC;
+        rst     : IN STD_LOGIC;
+        ce      : IN STD_LOGIC;
+
+        volume  : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+
+        idata   : IN STD_LOGIC_VECTOR(10 DOWNTO 0);
+
+        odata   : OUT STD_LOGIC_VECTOR(10 DOWNTO 0)
+        );
+end component;
+
 
 --
 SIGNAL int_CE_44100  : STD_LOGIC;
 SIGNAL int_cpt_44100 : STD_LOGIC_VECTOR(17 DOWNTO 0);
 SIGNAL int_mem_out   : STD_LOGIC_VECTOR(10 DOWNTO 0);
+SIGNAL int_vol_out   : STD_LOGIC_VECTOR(10 DOWNTO 0);
 
 SIGNAL int_mem_in    : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL int_addr_mem  : STD_LOGIC_VECTOR(17 DOWNTO 0);
 SIGNAL int_we        : STD_LOGIC;
+
+SIGNAL int_vol       : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL int_vol_cpt   : unsigned(3 DOWNTO 0);
+
+SIGNAL counter       : unsigned(27 DOWNTO 0) := (others => '0');
+SIGNAL counter_vct   : STD_LOGIC_VECTOR(27 DOWNTO 0);
+
 
 
 begin
@@ -137,7 +157,7 @@ port map(
     clk       => clk,
     ce_441    => int_CE_44100,
     rst       => btnCpuReset,
-    i_data    => int_mem_out,
+    i_data    => int_vol_out,
     o_data    => ampPWM,
     o_data_en => ampSD
 );
@@ -154,8 +174,33 @@ port map(
     memory_wen  => int_we
 );
 
+Volume_Manager_i: Volume_Manager 
+port map(
+    clk    => clk,
+    rst    => btnCpuReset,
+    ce     => '1',
+    volume => int_vol,
+    idata  => int_mem_out,
+    odata  => int_vol_out
+);
+    
+    
+    process(clk) is
+    begin
+        IF (clk'event and clk='1') THEN
+            counter <= counter + 1;
+            IF (counter = 100000000) THEN
+                int_vol_cpt <= int_vol_cpt + 1;
+                if(int_vol_cpt = 10) then
+                    int_vol_cpt <= to_unsigned(1,4); 
+                end if;
+                counter <= (others => '0');
+            END IF;
+        END IF;
+    end process;
 
-led(0) <= RsRx;
-led(1) <= int_we;
+int_vol <= std_logic_vector(int_vol_cpt);
+counter_vct <= std_logic_vector(counter);
 
 end Behavioral;
+
