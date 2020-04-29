@@ -10,9 +10,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 ENTITY Top_Level_Partie2 IS
-    GENERIC(
-        RAM_ADDR_BITS : INTEGER := 18
-    );
     PORT (
         btnCpuReset : in STD_LOGIC;
         
@@ -53,13 +50,13 @@ component PWM
     );
 end component;
 
-component cpt_0_44099
+component cpt_RAM
     Port (
         clk     : IN STD_LOGIC;
         rst     : IN STD_LOGIC;
         ce      : IN STD_LOGIC;
 
-        out_cpt : OUT STD_LOGIC_VECTOR (17 DOWNTO 0)
+        out_cpt : OUT STD_LOGIC_VECTOR (21 DOWNTO 0)
     );
 end component;
 
@@ -69,10 +66,10 @@ PORT (
 
       W_E      : IN  STD_LOGIC;
       
-      ADDR_W         : IN  STD_LOGIC_VECTOR(RAM_ADDR_BITS-1 DOWNTO 0);
+      ADDR_W         : IN  STD_LOGIC_VECTOR(21 DOWNTO 0);
       DATA_IN        : IN  STD_LOGIC_VECTOR(10 DOWNTO 0);
 
-      ADDR_R         : IN  STD_LOGIC_VECTOR(17 DOWNTO 0);
+      ADDR_R         : IN  STD_LOGIC_VECTOR(21 DOWNTO 0);
       DATA_OUT       : OUT STD_LOGIC_VECTOR(10 DOWNTO 0)
       );
 end component;
@@ -83,7 +80,7 @@ component full_UART_recv
         reset       : in  STD_LOGIC;
         rx          : in  STD_LOGIC;
 
-        memory_addr : out STD_LOGIC_VECTOR (RAM_ADDR_BITS-1 downto 0);
+        memory_addr : out STD_LOGIC_VECTOR (21 downto 0);
         data_value  : out STD_LOGIC_VECTOR (15 downto 0);
         memory_wen  : out STD_LOGIC
     );
@@ -106,12 +103,12 @@ end component;
 
 --
 SIGNAL int_CE_44100  : STD_LOGIC;
-SIGNAL int_cpt_44100 : STD_LOGIC_VECTOR(17 DOWNTO 0);
+SIGNAL int_cpt_44100 : STD_LOGIC_VECTOR(21 DOWNTO 0);
 SIGNAL int_mem_out   : STD_LOGIC_VECTOR(10 DOWNTO 0);
 SIGNAL int_vol_out   : STD_LOGIC_VECTOR(10 DOWNTO 0);
 
 SIGNAL int_mem_in    : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL int_addr_mem  : STD_LOGIC_VECTOR(17 DOWNTO 0);
+SIGNAL int_addr_mem  : STD_LOGIC_VECTOR(21 DOWNTO 0);
 SIGNAL int_we        : STD_LOGIC;
 
 SIGNAL int_vol       : STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -129,9 +126,9 @@ port map(
     clk     => clk,
     rst     => btnCpuReset,
     clk_out => int_CE_44100
-);   
+);
 
-cpt_0_44099_i: cpt_0_44099 
+cpt_RAM_i: cpt_RAM
 port map(
     clk     => clk,
     rst     => btnCpuReset,
@@ -183,23 +180,8 @@ port map(
     idata  => int_mem_out,
     odata  => int_vol_out
 );
-    
-    
-    process(clk) is
-    begin
-        IF (clk'event and clk='1') THEN
-            counter <= counter + 1;
-            IF (counter = 100000000) THEN
-                int_vol_cpt <= int_vol_cpt + 1;
-                if(int_vol_cpt = 10) then
-                    int_vol_cpt <= to_unsigned(1,4); 
-                end if;
-                counter <= (others => '0');
-            END IF;
-        END IF;
-    end process;
 
-int_vol <= std_logic_vector(int_vol_cpt);
+int_vol <= "1001";
 counter_vct <= std_logic_vector(counter);
 
 end Behavioral;

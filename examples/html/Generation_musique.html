@@ -1,0 +1,173 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Generation_musique</title><meta name="generator" content="MATLAB 9.7"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2020-04-29"><meta name="DC.source" content="Generation_musique.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput"><span class="comment">% Init</span>
+
+close <span class="string">all</span>; clear <span class="string">all</span>; clc;
+
+<span class="comment">% Start</span>
+
+[file,path] = uigetfile({<span class="string">'*.mp3;*.wav;*.ogg;*.flac;*.au;*.aiff;*.aifc;*.m4a;*.mp4'</span>,<span class="string">'AUDIO Files (*.mp3,*.wav,*.ogg,*.flac,*.au,*.aiff,*.aifc,*.m4a,*.mp4)'</span>;<span class="string">'*.*'</span>,<span class="string">'All Files (*.*)'</span>},<span class="string">'Select a File'</span>);
+
+filename = strcat(path,file);
+[y,Fs] = audioread(filename);
+
+l = length(y);
+
+<span class="keyword">if</span> size(y,2) == 2 <span class="comment">%Si c'est du stereo</span>
+    <span class="comment">% On le passe en mono</span>
+    Z = zeros(1,2^18);
+    <span class="keyword">for</span> i = 1:l-1
+        Z(i) = (y(i,1)+y(i,2))/2;
+    <span class="keyword">end</span>
+    y=Z;
+    clear <span class="string">Z</span>;
+<span class="keyword">end</span>
+
+mini = abs(min(y));
+maxi = max(y);
+
+<span class="comment">% Normalisation du vecteur</span>
+
+<span class="keyword">if</span>(mini &lt; maxi) <span class="comment">%max plus grand</span>
+    y=(y*1024)/maxi;
+<span class="keyword">else</span> <span class="comment">%min plus grand</span>
+    y=(y*1024)/mini;
+<span class="keyword">end</span>
+
+<span class="comment">% Extraction du nom du fichier</span>
+
+[filepath,name,ext] = fileparts(filename);
+
+<span class="comment">% Ecriture</span>
+
+outpath = uigetdir(path);
+
+fileID = fopen(strcat(outpath,name,<span class="string">'.uart'</span>),<span class="string">'w'</span>);
+fwrite(fileID,y,<span class="string">'int16'</span>);
+
+<span class="comment">% Fermeture du fichier</span>
+
+fclose(fileID);
+
+disp(strcat(<span class="string">'Fichier "'</span>,outpath,<span class="string">'/'</span>,name,<span class="string">'.uart"'</span>,<span class="string">' cr&eacute;&eacute; avec succ&egrave;s'</span>))
+</pre><pre class="codeoutput">Fichier "/home/user/cours/PR209_MP3/examples/niksa.uart" cr&eacute;&eacute; avec succ&egrave;s
+</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2019b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+% Init
+
+close all; clear all; clc;
+
+% Start
+
+[file,path] = uigetfile({'*.mp3;*.wav;*.ogg;*.flac;*.au;*.aiff;*.aifc;*.m4a;*.mp4','AUDIO Files (*.mp3,*.wav,*.ogg,*.flac,*.au,*.aiff,*.aifc,*.m4a,*.mp4)';'*.*','All Files (*.*)'},'Select a File');
+
+filename = strcat(path,file);
+[y,Fs] = audioread(filename);
+
+l = length(y);
+
+if size(y,2) == 2 %Si c'est du stereo
+    % On le passe en mono
+    Z = zeros(1,2^18);
+    for i = 1:l-1
+        Z(i) = (y(i,1)+y(i,2))/2;
+    end
+    y=Z;
+    clear Z;
+end
+
+mini = abs(min(y));
+maxi = max(y);
+
+% Normalisation du vecteur
+
+if(mini < maxi) %max plus grand
+    y=(y*1024)/maxi;
+else %min plus grand
+    y=(y*1024)/mini;
+end
+
+% Extraction du nom du fichier
+
+[filepath,name,ext] = fileparts(filename);
+
+% Ecriture
+
+outpath = uigetdir(path);
+
+fileID = fopen(strcat(outpath,name,'.uart'),'w');
+fwrite(fileID,y,'int16');
+
+% Fermeture du fichier
+
+fclose(fileID);
+
+disp(strcat('Fichier "',outpath,'/',name,'.uart"',' créé avec succès'))
+##### SOURCE END #####
+--></body></html>

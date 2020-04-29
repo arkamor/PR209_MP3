@@ -25,15 +25,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all;
 
 entity full_UART_recv is
-    GENERIC(
-        RAM_ADDR_BITS : INTEGER := 18
-    );
     PORT (
         clk_100MHz  : in  STD_LOGIC;
         reset       : in  STD_LOGIC;
         rx          : in  STD_LOGIC;
 
-        memory_addr : out STD_LOGIC_VECTOR (RAM_ADDR_BITS-1 downto 0);
+        memory_addr : out STD_LOGIC_VECTOR (21 downto 0);
         data_value  : out STD_LOGIC_VECTOR (15 downto 0);
         memory_wen  : out STD_LOGIC
     );
@@ -66,11 +63,10 @@ component stop_counter
       RESET     : IN  STD_LOGIC;
       CLOCK     : IN  STD_LOGIC;
       ENABLE    : IN  STD_LOGIC;
-      DATA_OUT  : OUT STD_LOGIC_VECTOR (RAM_ADDR_BITS-1 DOWNTO 0)
+      DATA_OUT  : OUT STD_LOGIC_VECTOR (21 DOWNTO 0)
       );
 end component;
-
-    SIGNAL ADR_MEMOIRE_W   : STD_LOGIC_VECTOR (RAM_ADDR_BITS-1 DOWNTO 0);
+    SIGNAL ADR_MEMOIRE_W   : STD_LOGIC_VECTOR (21 DOWNTO 0);
     SIGNAL DATAE_FROM_UART : STD_LOGIC;
     SIGNAL DATA_FROM_UART  : STD_LOGIC_VECTOR ( 7 DOWNTO 0);
     SIGNAL DATAE_TO_RAM    : STD_LOGIC;

@@ -1,0 +1,832 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Apr 29 13:26:40 2020
+# Process ID: 5172
+# Current directory: /home/user/cours/PR209_MP3/Projects/Partie_3/Partie_3.runs/synth_1
+# Command line: vivado -log Top_Level_Partie3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Level_Partie3.tcl
+# Log file: /home/user/cours/PR209_MP3/Projects/Partie_3/Partie_3.runs/synth_1/Top_Level_Partie3.vds
+# Journal file: /home/user/cours/PR209_MP3/Projects/Partie_3/Partie_3.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source Top_Level_Partie3.tcl -notrace
+Command: synth_design -top Top_Level_Partie3 -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5183 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1353.883 ; gain = 0.000 ; free physical = 10177 ; free virtual = 12364
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-1565] actual for formal port in_raz is neither a static name nor a globally static expression [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:373]
+WARNING: [Synth 8-1565] actual for formal port in_dec is neither a static name nor a globally static expression [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:385]
+WARNING: [Synth 8-1565] actual for formal port ce is neither a static name nor a globally static expression [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:449]
+WARNING: [Synth 8-1565] actual for formal port reset is neither a static name nor a globally static expression [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:483]
+INFO: [Synth 8-638] synthesizing module 'Top_Level_Partie3' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:40]
+INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_C' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:295]
+INFO: [Synth 8-638] synthesizing module 'BP' [/home/user/cours/PR209_MP3/src/BP.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'BP' (1#1) [/home/user/cours/PR209_MP3/src/BP.vhd:25]
+INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_D' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:303]
+INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_U' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:311]
+INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_L' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:319]
+INFO: [Synth 8-3491] module 'BP' declared at '/home/user/cours/PR209_MP3/src/BP.vhd:12' bound to instance 'BP_R' of component 'BP' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:327]
+INFO: [Synth 8-3491] module 'FSM' declared at '/home/user/cours/PR209_MP3/src/FSM.vhd:12' bound to instance 'MP3_FSM' of component 'FSM' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:335]
+INFO: [Synth 8-638] synthesizing module 'FSM' [/home/user/cours/PR209_MP3/src/FSM.vhd:35]
+WARNING: [Synth 8-614] signal 'current_state' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/FSM.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'FSM' (2#1) [/home/user/cours/PR209_MP3/src/FSM.vhd:35]
+INFO: [Synth 8-3491] module 'gestion_freq' declared at '/home/user/cours/PR209_MP3/src/gestion_freq.vhd:12' bound to instance 'MP3_gestion_freq' of component 'gestion_freq' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:356]
+INFO: [Synth 8-638] synthesizing module 'gestion_freq' [/home/user/cours/PR209_MP3/src/gestion_freq.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'gestion_freq' (3#1) [/home/user/cours/PR209_MP3/src/gestion_freq.vhd:25]
+INFO: [Synth 8-3491] module 'cpt_1_9' declared at '/home/user/cours/PR209_MP3/src/cpt_1_9.vhd:5' bound to instance 'MP3_cpt_1_9' of component 'cpt_1_9' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:365]
+INFO: [Synth 8-638] synthesizing module 'cpt_1_9' [/home/user/cours/PR209_MP3/src/cpt_1_9.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'cpt_1_9' (4#1) [/home/user/cours/PR209_MP3/src/cpt_1_9.vhd:19]
+INFO: [Synth 8-3491] module 'cpt_1_599' declared at '/home/user/cours/PR209_MP3/src/cpt_1_599.vhd:6' bound to instance 'MP3_cpt_1_599' of component 'cpt_1_599' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:378]
+INFO: [Synth 8-638] synthesizing module 'cpt_1_599' [/home/user/cours/PR209_MP3/src/cpt_1_599.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'cpt_1_599' (5#1) [/home/user/cours/PR209_MP3/src/cpt_1_599.vhd:20]
+INFO: [Synth 8-3491] module 'Trans' declared at '/home/user/cours/PR209_MP3/src/Trans.vhd:12' bound to instance 'MP3_Trans' of component 'Trans' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:391]
+INFO: [Synth 8-638] synthesizing module 'Trans' [/home/user/cours/PR209_MP3/src/Trans.vhd:35]
+INFO: [Synth 8-3491] module 'Transcodeur_1' declared at '/home/user/cours/PR209_MP3/src/Transcodeur_1.vhd:12' bound to instance 'Tr0' of component 'Transcodeur_1' [/home/user/cours/PR209_MP3/src/Trans.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'Transcodeur_1' [/home/user/cours/PR209_MP3/src/Transcodeur_1.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'Transcodeur_1' (6#1) [/home/user/cours/PR209_MP3/src/Transcodeur_1.vhd:17]
+INFO: [Synth 8-3491] module 'Transcodeur_1' declared at '/home/user/cours/PR209_MP3/src/Transcodeur_1.vhd:12' bound to instance 'Tr1' of component 'Transcodeur_1' [/home/user/cours/PR209_MP3/src/Trans.vhd:59]
+INFO: [Synth 8-3491] module 'Transcodeur_1' declared at '/home/user/cours/PR209_MP3/src/Transcodeur_1.vhd:12' bound to instance 'Tr2' of component 'Transcodeur_1' [/home/user/cours/PR209_MP3/src/Trans.vhd:65]
+INFO: [Synth 8-3491] module 'Transcodeur_1' declared at '/home/user/cours/PR209_MP3/src/Transcodeur_1.vhd:12' bound to instance 'Tr3' of component 'Transcodeur_1' [/home/user/cours/PR209_MP3/src/Trans.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'Trans' (7#1) [/home/user/cours/PR209_MP3/src/Trans.vhd:35]
+INFO: [Synth 8-3491] module 'mux8_seg' declared at '/home/user/cours/PR209_MP3/src/mux8_seg.vhd:12' bound to instance 'MP3_mux8_seg' of component 'mux8_seg' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:410]
+INFO: [Synth 8-638] synthesizing module 'mux8_seg' [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:32]
+INFO: [Synth 8-226] default block is never used [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:38]
+WARNING: [Synth 8-614] signal 'SEG0' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
+WARNING: [Synth 8-614] signal 'SEG1' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
+WARNING: [Synth 8-614] signal 'SEG2' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
+WARNING: [Synth 8-614] signal 'SEG3' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
+WARNING: [Synth 8-614] signal 'SEG4' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
+WARNING: [Synth 8-614] signal 'SEG5' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
+WARNING: [Synth 8-614] signal 'SEG6' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
+WARNING: [Synth 8-614] signal 'SEG7' is read in the process but is not in the sensitivity list [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'mux8_seg' (8#1) [/home/user/cours/PR209_MP3/src/mux8_seg.vhd:32]
+INFO: [Synth 8-3491] module 'mod8' declared at '/home/user/cours/PR209_MP3/src/mod8.vhd:12' bound to instance 'MP3_mod8' of component 'mod8' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:428]
+INFO: [Synth 8-638] synthesizing module 'mod8' [/home/user/cours/PR209_MP3/src/mod8.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'mod8' (9#1) [/home/user/cours/PR209_MP3/src/mod8.vhd:24]
+INFO: [Synth 8-3491] module 'CE_gen_44100' declared at '/home/user/cours/PR209_MP3/src/CE_gen_44100.vhd:5' bound to instance 'CE_gen_44100_i' of component 'CE_gen_44100' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:438]
+INFO: [Synth 8-638] synthesizing module 'CE_gen_44100' [/home/user/cours/PR209_MP3/src/CE_gen_44100.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'CE_gen_44100' (10#1) [/home/user/cours/PR209_MP3/src/CE_gen_44100.vhd:14]
+INFO: [Synth 8-3491] module 'cpt_RAM' declared at '/home/user/cours/PR209_MP3/src/cpt_RAM.vhd:6' bound to instance 'cpt_RAM_i' of component 'cpt_RAM' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:445]
+INFO: [Synth 8-638] synthesizing module 'cpt_RAM' [/home/user/cours/PR209_MP3/src/cpt_RAM.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'cpt_RAM' (11#1) [/home/user/cours/PR209_MP3/src/cpt_RAM.vhd:18]
+INFO: [Synth 8-3491] module 'RAM' declared at '/home/user/cours/PR209_MP3/src/RAM.vhd:5' bound to instance 'RAM_i' of component 'RAM' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:456]
+INFO: [Synth 8-638] synthesizing module 'RAM' [/home/user/cours/PR209_MP3/src/RAM.vhd:20]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "BLOCK" *) [/home/user/cours/PR209_MP3/src/RAM.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (12#1) [/home/user/cours/PR209_MP3/src/RAM.vhd:20]
+INFO: [Synth 8-3491] module 'PWM' declared at '/home/user/cours/PR209_MP3/src/PWM.vhd:5' bound to instance 'PWM_i' of component 'PWM' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:469]
+INFO: [Synth 8-638] synthesizing module 'PWM' [/home/user/cours/PR209_MP3/src/PWM.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'PWM' (13#1) [/home/user/cours/PR209_MP3/src/PWM.vhd:19]
+INFO: [Synth 8-3491] module 'full_UART_recv' declared at '/home/user/cours/PR209_MP3/src/uart/full_uart_recv.vhd:27' bound to instance 'full_UART_recv_i' of component 'full_UART_recv' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:479]
+INFO: [Synth 8-638] synthesizing module 'full_UART_recv' [/home/user/cours/PR209_MP3/src/uart/full_uart_recv.vhd:42]
+	Parameter RAM_ADDR_BITS bound to: 22 - type: integer 
+INFO: [Synth 8-3491] module 'UART_recv' declared at '/home/user/cours/PR209_MP3/src/uart/uart_recv.vhd:27' bound to instance 'receiver' of component 'UART_recv' [/home/user/cours/PR209_MP3/src/uart/full_uart_recv.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'UART_recv' [/home/user/cours/PR209_MP3/src/uart/uart_recv.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'UART_recv' (14#1) [/home/user/cours/PR209_MP3/src/uart/uart_recv.vhd:35]
+INFO: [Synth 8-3491] module 'merger_8b_to_16b' declared at '/home/user/cours/PR209_MP3/src/uart/merger_8b_to_16b.vhd:5' bound to instance 'merger' of component 'merger_8b_to_16b' [/home/user/cours/PR209_MP3/src/uart/full_uart_recv.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'merger_8b_to_16b' [/home/user/cours/PR209_MP3/src/uart/merger_8b_to_16b.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'merger_8b_to_16b' (15#1) [/home/user/cours/PR209_MP3/src/uart/merger_8b_to_16b.vhd:17]
+	Parameter BITS bound to: 22 - type: integer 
+INFO: [Synth 8-3491] module 'stop_counter' declared at '/home/user/cours/PR209_MP3/src/uart/stop_counter.vhd:5' bound to instance 'counter' of component 'stop_counter' [/home/user/cours/PR209_MP3/src/uart/full_uart_recv.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'stop_counter' [/home/user/cours/PR209_MP3/src/uart/stop_counter.vhd:17]
+	Parameter BITS bound to: 22 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'stop_counter' (16#1) [/home/user/cours/PR209_MP3/src/uart/stop_counter.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'full_UART_recv' (17#1) [/home/user/cours/PR209_MP3/src/uart/full_uart_recv.vhd:42]
+INFO: [Synth 8-3491] module 'Volume_Manager' declared at '/home/user/cours/PR209_MP3/src/volume_manager.vhd:5' bound to instance 'Volume_Manager_i' of component 'Volume_Manager' [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:491]
+INFO: [Synth 8-638] synthesizing module 'Volume_Manager' [/home/user/cours/PR209_MP3/src/volume_manager.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'Volume_Manager' (18#1) [/home/user/cours/PR209_MP3/src/volume_manager.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'Top_Level_Partie3' (19#1) [/home/user/cours/PR209_MP3/src/Top_level_Partie3.vhd:40]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[21]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[20]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[19]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[18]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[17]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[16]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[15]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[14]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[13]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[12]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[11]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[10]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[9]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[8]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[7]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[6]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[5]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[4]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[3]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[2]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[1]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[0]
+WARNING: [Synth 8-3331] design FSM has unconnected port ce
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2342.387 ; gain = 988.504 ; free physical = 9648 ; free virtual = 11861
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2342.387 ; gain = 988.504 ; free physical = 9649 ; free virtual = 11863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2342.387 ; gain = 988.504 ; free physical = 9649 ; free virtual = 11863
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/user/cours/PR209_MP3/Projects/Partie_3/Partie_3.srcs/constrs_1/imports/new/nexys4.xdc]
+Finished Parsing XDC File [/home/user/cours/PR209_MP3/Projects/Partie_3/Partie_3.srcs/constrs_1/imports/new/nexys4.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/user/cours/PR209_MP3/Projects/Partie_3/Partie_3.srcs/constrs_1/imports/new/nexys4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Level_Partie3_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Level_Partie3_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2374.402 ; gain = 0.000 ; free physical = 9337 ; free virtual = 11585
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2374.402 ; gain = 0.000 ; free physical = 9338 ; free virtual = 11586
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2374.402 ; gain = 0.000 ; free physical = 9338 ; free virtual = 11586
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2374.402 ; gain = 0.000 ; free physical = 9338 ; free virtual = 11586
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2374.402 ; gain = 1020.520 ; free physical = 9375 ; free virtual = 11634
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2374.402 ; gain = 1020.520 ; free physical = 9375 ; free virtual = 11634
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2374.402 ; gain = 1020.520 ; free physical = 9377 ; free virtual = 11636
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'FSM'
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "output_3k" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "output_10h" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/user/cours/PR209_MP3/src/cpt_1_9.vhd:34]
+INFO: [Synth 8-5545] ROM "clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'UART_recv'
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "nbbits" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nbbits" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'PLAY_PAUSE_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:105]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:45]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:45]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_init |                              000 |                              000
+              s_play_fwd |                              001 |                              001
+                 s_pause |                              010 |                              011
+              s_play_bwd |                              011 |                              010
+                 s_stoop |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'FSM'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:45]
+WARNING: [Synth 8-327] inferring latch for variable 'RESTART_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:106]
+WARNING: [Synth 8-327] inferring latch for variable 'FORWARD_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:107]
+WARNING: [Synth 8-327] inferring latch for variable 'VOLUME_UP_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:108]
+WARNING: [Synth 8-327] inferring latch for variable 'VOLUME_DW_reg' [/home/user/cours/PR209_MP3/src/FSM.vhd:109]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+           zero_as_input |                              110 |                              001
+           wait_next_bit |                              100 |                              010
+              bit_sample |                              101 |                              011
+            bit_received |                              011 |                              100
+           wait_stop_bit |                              010 |                              101
+        last_bit_is_zero |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'UART_recv'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 2859.207 ; gain = 1505.324 ; free physical = 9524 ; free virtual = 11796
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     31 Bit       Adders := 2     
+	   2 Input     27 Bit       Adders := 5     
+	   2 Input     25 Bit       Adders := 1     
+	   2 Input     22 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               27 Bit    Registers := 5     
+	               25 Bit    Registers := 1     
+	               22 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
++---RAMs : 
+	           28423K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 2     
+	   3 Input     27 Bit        Muxes := 5     
+	   2 Input     27 Bit        Muxes := 5     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 4     
+	   7 Input     10 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
+	   3 Input      7 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 11    
+	   7 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 21    
+	   5 Input      1 Bit        Muxes := 12    
+	   8 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module BP 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     27 Bit       Adders := 1     
++---Registers : 
+	               27 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     27 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module FSM 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 7     
+	   5 Input      1 Bit        Muxes := 12    
+Module gestion_freq 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               25 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module cpt_1_9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module cpt_1_599 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module Trans 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 2     
+Module mux8_seg 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      1 Bit        Muxes := 1     
+Module mod8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+Module CE_gen_44100 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module cpt_RAM 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 1     
+Module RAM 
+Detailed RTL Component Info : 
++---Registers : 
+	               11 Bit    Registers := 1     
++---RAMs : 
+	           28423K Bit         RAMs := 1     
+Module PWM 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+Module UART_recv 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   7 Input     10 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 5     
+	   7 Input      1 Bit        Muxes := 1     
+Module merger_8b_to_16b 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module stop_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 1     
++---Registers : 
+	               22 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 1     
+Module Volume_Manager 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+DSP Report: Generating DSP out_val4, operation Mode is: (D+(A:0x400))*(B:0x8db).
+DSP Report: operator out_val4 is absorbed into DSP out_val4.
+DSP Report: operator out_val5 is absorbed into DSP out_val4.
+INFO: [Synth 8-5546] ROM "receiver/state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MP3_gestion_freq/output_10h" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MP3_gestion_freq/output_3k" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[21]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[20]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[19]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[18]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[17]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[16]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[15]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[14]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[13]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[12]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[11]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[10]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[9]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[8]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[7]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[6]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[5]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[4]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[3]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[2]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[1]
+WARNING: [Synth 8-3331] design RAM has unconnected port ADDR_W[0]
+WARNING: [Synth 8-3331] design FSM has unconnected port ce
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__492' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__493'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__481' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__470' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__459' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__460'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__448' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__437' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__426' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__415' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__404' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__393' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__382' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__460'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__371' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__372'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__360' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__361'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__349' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__338' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__327' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__316' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__305' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__294' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__283' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__460'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__272' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__261' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__250' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__239' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__228' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__217' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__206' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__460'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__195' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__372'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__184' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__173' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__162' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__151' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__140' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__129' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__118' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__460'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__107' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__96' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__85' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__74' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__63' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__52' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__41' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__460'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__30' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__372'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__19' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__361'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__8' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__9'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__491' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__493'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__480' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__469' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__458' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__460'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__447' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__436' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__425' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__414' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__403' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__392' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__381' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__460'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__370' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__372'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__359' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__361'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__348' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__337' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__326' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__315' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__304' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__293' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__282' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__460'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__271' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__260' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__249' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__238' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__227' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__216' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__205' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__460'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__194' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__372'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__183' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__172' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__161' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__150' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__139' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__128' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__117' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__460'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__106' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__95' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__84' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__73' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__62' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__51' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__40' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__460'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__29' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__372'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__18' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__361'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__7' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__9'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__490' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__493'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__479' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__468' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__457' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__460'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__446' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__435' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__424' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__413' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__402' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__482'
+INFO: [Synth 8-3886] merging instance 'i_15/RAM_i/memory_reg_mux_sel__391' (FDE) to 'i_15/RAM_i/memory_reg_mux_sel__471'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 2894.207 ; gain = 1540.324 ; free physical = 9388 ; free virtual = 11750
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5835] Resources of type BRAM have been overutilized. Used = 1782, Available = 270. Will try to implement using LUT-RAM. 
+WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM RAM_i/memory_reg,trying to implement using LUTRAM
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------------+------------------+-----------+----------------------+-----------------------------------------------------------------------------------+
+|Module Name       | RTL Object       | Inference | Size (Depth x Width) | Primitives                                                                        | 
++------------------+------------------+-----------+----------------------+-----------------------------------------------------------------------------------+
+|Top_Level_Partie3 | RAM_i/memory_reg | Implied   | 4096 K x 11          | RAM16X1S x 11  RAM32X1S x 11  RAM64X1S x 11  RAM128X1S x 11  RAM256X1S x 113685   | 
++------------------+------------------+-----------+----------------------+-----------------------------------------------------------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping             | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|PWM         | (D+(A:0x400))*(B:0x8db) | 12     | 13     | -      | 11     | 26     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
++------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/user/cours/PR209_MP3/src/volume_manager.vhd:26]
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:05 . Memory (MB): peak = 2926.207 ; gain = 1572.324 ; free physical = 7343 ; free virtual = 10198
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:48 ; elapsed = 00:02:56 . Memory (MB): peak = 3644.285 ; gain = 2290.402 ; free physical = 5552 ; free virtual = 8633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++------------------+------------------+-----------+----------------------+-----------------------------------------------------------------------------------+
+|Module Name       | RTL Object       | Inference | Size (Depth x Width) | Primitives                                                                        | 
++------------------+------------------+-----------+----------------------+-----------------------------------------------------------------------------------+
+|Top_Level_Partie3 | RAM_i/memory_reg | Implied   | 4096 K x 11          | RAM16X1S x 11  RAM32X1S x 11  RAM64X1S x 11  RAM128X1S x 11  RAM256X1S x 113685   | 
++------------------+------------------+-----------+----------------------+-----------------------------------------------------------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/user/cours/PR209_MP3/src/volume_manager.vhd:26]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:10:20 ; elapsed = 00:10:31 . Memory (MB): peak = 6701.168 ; gain = 5347.285 ; free physical = 5682 ; free virtual = 8807
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:19:36 ; elapsed = 00:19:47 . Memory (MB): peak = 6701.168 ; gain = 5347.285 ; free physical = 5497 ; free virtual = 8641
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:19:38 ; elapsed = 00:19:49 . Memory (MB): peak = 6701.168 ; gain = 5347.285 ; free physical = 5518 ; free virtual = 8657
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:21:12 ; elapsed = 00:21:23 . Memory (MB): peak = 6701.168 ; gain = 5347.285 ; free physical = 5520 ; free virtual = 8645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:21:48 ; elapsed = 00:22:00 . Memory (MB): peak = 6701.168 ; gain = 5347.285 ; free physical = 5536 ; free virtual = 8664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:22:44 ; elapsed = 00:22:57 . Memory (MB): peak = 6701.168 ; gain = 5347.285 ; free physical = 5481 ; free virtual = 8610
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:22:51 ; elapsed = 00:23:04 . Memory (MB): peak = 6701.168 ; gain = 5347.285 ; free physical = 5459 ; free virtual = 8596
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+-------+
+|      |Cell      |Count  |
++------+----------+-------+
+|1     |BUFG      |      1|
+|2     |CARRY4    |     89|
+|3     |DSP48E1   |      1|
+|4     |LUT1      |     50|
+|5     |LUT2      |    434|
+|6     |LUT3      |   5284|
+|7     |LUT4      | 135227|
+|8     |LUT5      |   8711|
+|9     |LUT6      | 144518|
+|10    |MUXF7     |  15148|
+|11    |MUXF8     |   7524|
+|12    |RAM128X1S |     11|
+|13    |RAM16X1S  |     11|
+|14    |RAM256X1S | 113685|
+|15    |RAM32X1S  |     11|
+|16    |RAM64X1S  |     11|
+|17    |FDCE      |   1422|
+|18    |FDPE      |      2|
+|19    |FDRE      |     54|
+|20    |FDSE      |      4|
+|21    |LD        |      5|
+|22    |LDC       |      3|
+|23    |IBUF      |      8|
+|24    |OBUF      |     18|
++------+----------+-------+
+
+Report Instance Areas: 
++------+-------------------+-----------------+-------+
+|      |Instance           |Module           |Cells  |
++------+-------------------+-----------------+-------+
+|1     |top                |                 | 432232|
+|2     |  BP_C             |BP               |     76|
+|3     |  BP_D             |BP_0             |     76|
+|4     |  BP_L             |BP_1             |     76|
+|5     |  BP_R             |BP_2             |     76|
+|6     |  BP_U             |BP_3             |     76|
+|7     |  CE_gen_44100_i   |CE_gen_44100     |     83|
+|8     |  MP3_FSM          |FSM              |     56|
+|9     |  MP3_Trans        |Trans            |     52|
+|10    |  MP3_cpt_1_599    |cpt_1_599        |     81|
+|11    |  MP3_cpt_1_9      |cpt_1_9          |     78|
+|12    |  MP3_gestion_freq |gestion_freq     |    114|
+|13    |  MP3_mod8         |mod8             |     20|
+|14    |  PWM_i            |PWM              |    100|
+|15    |  RAM_i            |RAM              | 166788|
+|16    |  Volume_Manager_i |Volume_Manager   |     11|
+|17    |  cpt_RAM_i        |cpt_RAM          | 264156|
+|18    |  full_UART_recv_i |full_UART_recv   |    286|
+|19    |    merger         |merger_8b_to_16b |    196|
+|20    |    receiver       |UART_recv        |     90|
++------+-------------------+-----------------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:22:51 ; elapsed = 00:23:04 . Memory (MB): peak = 6701.168 ; gain = 5347.285 ; free physical = 5460 ; free virtual = 8594
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 33 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:22:49 ; elapsed = 00:23:01 . Memory (MB): peak = 6701.168 ; gain = 5315.270 ; free physical = 5540 ; free virtual = 8672
+Synthesis Optimization Complete : Time (s): cpu = 00:22:51 ; elapsed = 00:23:04 . Memory (MB): peak = 6701.176 ; gain = 5347.285 ; free physical = 5540 ; free virtual = 8672
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 136499 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 36 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.32 . Memory (MB): peak = 6701.176 ; gain = 0.000 ; free physical = 3970 ; free virtual = 7103
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 113737 instances were transformed.
+  LD => LDCE: 5 instances
+  LDC => LDCE: 3 instances
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E, RAMS64E): 11 instances
+  RAM16X1S => RAM32X1S (RAMS32): 11 instances
+  RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 113685 instances
+  RAM32X1S => RAM32X1S (RAMS32): 11 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 11 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+210 Infos, 69 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:25:22 ; elapsed = 00:25:31 . Memory (MB): peak = 6701.176 ; gain = 5347.469 ; free physical = 5295 ; free virtual = 8427
+Netlist sorting complete. Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.33 . Memory (MB): peak = 6701.176 ; gain = 0.000 ; free physical = 5304 ; free virtual = 8437
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/user/cours/PR209_MP3/Projects/Partie_3/Partie_3.runs/synth_1/Top_Level_Partie3.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:01:03 ; elapsed = 00:00:59 . Memory (MB): peak = 6725.180 ; gain = 24.004 ; free physical = 5069 ; free virtual = 8284
+INFO: [runtcl-4] Executing : report_utilization -file Top_Level_Partie3_utilization_synth.rpt -pb Top_Level_Partie3_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 29 13:53:18 2020...
