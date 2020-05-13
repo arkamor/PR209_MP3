@@ -11,14 +11,14 @@ import wget
 
 args = func.set_parser()
 
-ser = serial.Serial(args.p, args.b, 8, 'N', 1, timeout=1)
+ser = serial.Serial(args.p, args.b, 8, 'N', 1)
 
 root = tk.Tk()
 root.withdraw()
 
 #? variables definition ?#
 SampleRate = 44100 #! sample/seconds !#
-max_len = 6 #! Longeur max en secondes !#
+max_len = 60 #! Longeur max en secondes !#
 tmp_file = "/tmp/aud2mp3.wav" #! Fichier WAV temporaire !#
 demo_url = "http://nas.aucher.xyz/zeppelin.mp3"
 in_file = "/tmp/zepplin.mp3"
@@ -31,6 +31,7 @@ in_file = "/tmp/zepplin.mp3"
 # else if(demo):
 #     wget.download(demo_url, "/tmp/zepplin.mp3")
 
+print("Téléchargement de la musique demo...")
 wget.download(demo_url, in_file)
 
 print("\nSending file : \"" + in_file + "\" at " + str(args.b) + " bauds on \"" + str(args.p) + "\"")
@@ -59,7 +60,8 @@ for i in range(0,len(audio)):
     num.append(a[0]);num.append(a[1])
 
 """ fonctionne absolument bien """
-listofzeros = [0]*2**18
+
+listofzeros = [0]*max_len*44100
 
 print("Clearing RAM")
 ser.write(listofzeros) # ? clear ram

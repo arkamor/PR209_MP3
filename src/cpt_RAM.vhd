@@ -30,12 +30,12 @@ begin
             IF ( ce = '1') THEN
                 IF(inc = '1') THEN
                     count <= count + 1;
-                    IF (count = 264600) THEN
+                    IF (count = 2646000) THEN
                         count <= (others => '0');
                     END IF;
                 ELSE
                     IF (count = 0) THEN
-                        count <= to_unsigned(264599,22);
+                        count <= to_unsigned(2645999,22);
                     END IF;
                     count <= count - 1;
                 END IF;
