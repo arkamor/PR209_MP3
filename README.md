@@ -46,3 +46,21 @@ foo@bar:~$ sudo python PR209_MP3/Load_sound/send_audio_gui.py #Avec GUI
 ```bash
 foo@bar:~$ sudo python PR209_MP3/Load_sound/send_audio.py --help #Avec CLI
 ```
+
+```bash
+usage: send_audio.py [-h] [-v | -q] [-b B] [-p P]
+
+The purpose of this program is to convert and then,
+send audio files to Nexys 4 board loaded with MP3_Project.
+
+optional arguments:
+  -h, --help       show this help message and exit
+  -v, --verbosity  Increase output verbosity (max 2)
+  -q, --quiet      No output
+  -b B             Change Baudrate,   default : 921600
+  -p P             Change seial Port, default : /dev/ttyUSB1
+
+Program written by Martin AUCHER and Kevin PEREZ
+for ENSEIRB-MATMECA Numerical conception courses.
+https://github.com/arkamor/PR209_MP3
+```
