@@ -1,8 +1,8 @@
 ---------------------------------------------------------
--- VHDL top level for 8 bits processor's FSM				  
--- by Martin AUCHER & Kevin PEREZ, 02/2020
+-- VHDL Transcoder for audio Project			  
+-- by Martin AUCHER & Kevin PEREZ, 04/2020
 --
--- Code used for 8 bits processor courses at ENSEIRB-MATMECA
+-- Code used foraudio Project courses at ENSEIRB-MATMECA
 ---------------------------------------------------------
 
 library IEEE;

@@ -30,7 +30,7 @@ entity full_UART_recv is
         reset       : in  STD_LOGIC;
         rx          : in  STD_LOGIC;
 
-        memory_addr : out STD_LOGIC_VECTOR (21 downto 0);
+        memory_addr : out STD_LOGIC_VECTOR (17 downto 0);
         data_value  : out STD_LOGIC_VECTOR (15 downto 0);
         memory_wen  : out STD_LOGIC
     );
@@ -63,10 +63,10 @@ component stop_counter
       RESET     : IN  STD_LOGIC;
       CLOCK     : IN  STD_LOGIC;
       ENABLE    : IN  STD_LOGIC;
-      DATA_OUT  : OUT STD_LOGIC_VECTOR (21 DOWNTO 0)
+      DATA_OUT  : OUT STD_LOGIC_VECTOR (17 DOWNTO 0)
       );
 end component;
-    SIGNAL ADR_MEMOIRE_W   : STD_LOGIC_VECTOR (21 DOWNTO 0);
+    SIGNAL ADR_MEMOIRE_W   : STD_LOGIC_VECTOR (17 DOWNTO 0);
     SIGNAL DATAE_FROM_UART : STD_LOGIC;
     SIGNAL DATA_FROM_UART  : STD_LOGIC_VECTOR ( 7 DOWNTO 0);
     SIGNAL DATAE_TO_RAM    : STD_LOGIC;

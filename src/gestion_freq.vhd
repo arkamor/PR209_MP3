@@ -1,8 +1,8 @@
 ---------------------------------------------------------
--- VHDL top level for 8 bits processor's FSM				  
--- by Martin AUCHER & Kevin PEREZ, 02/2020
+-- VHDL Frequency gestion 7 segments display for audio Project			  
+-- by Martin AUCHER & Kevin PEREZ, 04/2020
 --
--- Code used for 8 bits processor courses at ENSEIRB-MATMECA
+-- Code used foraudio Project courses at ENSEIRB-MATMECA
 ---------------------------------------------------------
 
 library IEEE;
@@ -39,14 +39,14 @@ begin
             count_3k  <= count_3k  + 1;
             count_10h <= count_10h + 1;
             
-            IF (count_3k = 33332) THEN -- asynchronous reset
+            IF (count_3k = 3332) THEN -- asynchronous reset
                 count_3k <= (others => '0');
                 output_3k <= '1';
             ELSE
                 output_3k <= '0';
             END IF;
             
-            IF (count_10h = 9999999) THEN -- asynchronous reset
+            IF (count_10h = 9999) THEN -- asynchronous reset
                 count_10h <= (others => '0');
                 output_10h <= '1';
             ELSE

@@ -1,3 +1,10 @@
+---------------------------------------------------------
+-- VHDL Volume manager for audio Project			  
+-- by Martin AUCHER & Kevin PEREZ, 04/2020
+--
+-- Code used foraudio Project courses at ENSEIRB-MATMECA
+---------------------------------------------------------
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;

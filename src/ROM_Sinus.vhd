@@ -1,3 +1,10 @@
+---------------------------------------------------------
+-- VHDL ROM for audio Project			  
+-- by Martin AUCHER & Kevin PEREZ, 04/2020
+--
+-- Code used foraudio Project courses at ENSEIRB-MATMECA
+---------------------------------------------------------
+
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;

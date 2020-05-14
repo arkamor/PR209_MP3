@@ -1,8 +1,8 @@
 ---------------------------------------------------------
--- VHDL top level for 8 bits processor's FSM				  
--- by Martin AUCHER & Kevin PEREZ, 02/2020
+-- VHDL Top level part 3 for audio Project			  
+-- by Martin AUCHER & Kevin PEREZ, 04/2020
 --
--- Code used for 8 bits processor courses at ENSEIRB-MATMECA
+-- Code used foraudio Project courses at ENSEIRB-MATMECA
 ---------------------------------------------------------
 
 library IEEE;
@@ -191,7 +191,7 @@ component cpt_RAM
         
         inc     : IN STD_LOGIC;
 
-        out_cpt : OUT STD_LOGIC_VECTOR (21 DOWNTO 0)
+        out_cpt : OUT STD_LOGIC_VECTOR (17 DOWNTO 0)
     );
 end component;
 
@@ -201,10 +201,10 @@ PORT (
 
       W_E      : IN  STD_LOGIC;
       
-      ADDR_W         : IN  STD_LOGIC_VECTOR(21 DOWNTO 0);
+      ADDR_W         : IN  STD_LOGIC_VECTOR(17 DOWNTO 0);
       DATA_IN        : IN  STD_LOGIC_VECTOR(10 DOWNTO 0);
 
-      ADDR_R         : IN  STD_LOGIC_VECTOR(21 DOWNTO 0);
+      ADDR_R         : IN  STD_LOGIC_VECTOR(17 DOWNTO 0);
       DATA_OUT       : OUT STD_LOGIC_VECTOR(10 DOWNTO 0)
       );
 end component;
@@ -215,7 +215,7 @@ component full_UART_recv
         reset       : in  STD_LOGIC;
         rx          : in  STD_LOGIC;
 
-        memory_addr : out STD_LOGIC_VECTOR (21 downto 0);
+        memory_addr : out STD_LOGIC_VECTOR (17 downto 0);
         data_value  : out STD_LOGIC_VECTOR (15 downto 0);
         memory_wen  : out STD_LOGIC
     );
@@ -275,12 +275,12 @@ SIGNAL int_SEG_comm : STD_LOGIC_VECTOR(2 DOWNTO 0);
 --- BORDEL PART 3
 
 SIGNAL int_CE_44100  : STD_LOGIC;
-SIGNAL int_cpt_RAM   : STD_LOGIC_VECTOR(21 DOWNTO 0);
+SIGNAL int_cpt_RAM   : STD_LOGIC_VECTOR(17 DOWNTO 0);
 SIGNAL int_mem_out   : STD_LOGIC_VECTOR(10 DOWNTO 0);
 SIGNAL int_vol_out   : STD_LOGIC_VECTOR(10 DOWNTO 0);
 
 SIGNAL int_mem_in    : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL int_addr_mem  : STD_LOGIC_VECTOR(21 DOWNTO 0);
+SIGNAL int_addr_mem  : STD_LOGIC_VECTOR(17 DOWNTO 0);
 SIGNAL int_we        : STD_LOGIC;
 
 SIGNAL int_vol       : STD_LOGIC_VECTOR(3 DOWNTO 0);
