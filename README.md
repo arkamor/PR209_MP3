@@ -47,7 +47,7 @@ foo@bar:~$ sudo python PR209_MP3/Load_sound/send_audio_gui.py #Avec GUI
 foo@bar:~$ sudo python PR209_MP3/Load_sound/send_audio.py --help #Avec CLI
 ```
 
-```bash
+```
 usage: send_audio.py [-h] [-v | -q] [-b B] [-p P]
 
 The purpose of this program is to convert and then,
