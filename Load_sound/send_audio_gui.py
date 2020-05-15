@@ -1,3 +1,10 @@
+############################################################
+## Python send_audio for audio Project  	              ##
+## by Martin AUCHER & Kevin PEREZ, 04/2020                ##
+##                                                        ##
+## Code used for audio Project courses at ENSEIRB-MATMECA ##
+############################################################
+
 import tkinter as tk
 from tkinter import ttk 
 import tkinter.filedialog
@@ -15,9 +22,9 @@ tmp_file = "/tmp/aud2mp3.wav" #! Fichier WAV temporaire !#
 demo_url = "http://nas.aucher.xyz/zeppelin.mp3"
 filepath = ""
 
-def browse_file(coucou):
+def browse_file(value_tk):
     filepath = tk.filedialog.askopenfilename(title = "Select A File")
-    coucou.set(filepath)
+    value_tk.set(filepath)
 
 def load_file(url_or_file,audio_url,file_audio_path,speed,port):
     # print("----------------------")
@@ -121,12 +128,12 @@ url_or_file.set("file")
 tk.Radiobutton(audio_frame, variable=url_or_file, text="Select file to write", value="file", indicator = 0, fg="black").grid(row=1, column=0, padx=padv)
 tk.Radiobutton(audio_frame, variable=url_or_file, text="Select Youtube URL", value="url", indicator = 0, fg="black").grid(row=1, column=2, padx=padv)
 
-coucou=tk.StringVar()
-file_audio_path=tk.Entry(audio_frame, textvariable=coucou, state="readonly", fg="black",width=40)
-coucou.set("Choose path ..")
+txt_var=tk.StringVar()
+file_audio_path=tk.Entry(audio_frame, textvariable=txt_var, state="readonly", fg="black",width=40)
+txt_var.set("Choose path ..")
 file_audio_path.grid(row=2, column=0, padx=padv)
 
-tk.Button(audio_frame, command=lambda:browse_file(coucou) , text="Browse").grid(row=2, column=1, padx=padv)
+tk.Button(audio_frame, command=lambda:browse_file(txt_var) , text="Browse").grid(row=2, column=1, padx=padv)
 
 # Choix d'une url audio
 

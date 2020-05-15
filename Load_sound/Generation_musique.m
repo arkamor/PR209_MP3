@@ -1,3 +1,10 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Matlab send_audio for audio Project  	              %%
+%% by Martin AUCHER & Kevin PEREZ, 04/2020                %%
+%%                                                        %%
+%% Code used for audio Project courses at ENSEIRB-MATMECA %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Init
 
 close all; clear all; clc;
